@@ -324,7 +324,7 @@
                         <h2>Manage <b>Users</b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <a onclick="deleter(-1)" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete Users Database</span></a>
+                        <a onclick="deleter(-1,'x')" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete Users Database</span></a>
 
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#usermodal" ><i class="material-icons">&#xE147;</i> <span>Add New User</span></button>{{--id of whats affected by the button /toogle:what we are doing with the button --}}
                     </div>
@@ -434,7 +434,7 @@
                         <h2>Manage <b>Shops</b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <a onclick="deleter(-1)" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete Shops Database</span></a>
+                        <a onclick="deleter(-1,'y')" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete Shops Database</span></a>
 
                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#shopmodal" ><i class="material-icons">&#xE147;</i> <span>Add New Shop</span></button>{{--id of whats affected by the button /toogle:what we are doing with the button --}}
                     </div>
@@ -493,7 +493,7 @@
             <form action="/admin/x"  method="post" class="p-5 bg-white" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-header">
-                    <h4 class="modal-title">Add New Users</h4>
+                    <h4 class="modal-title">Add </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -544,7 +544,7 @@
             <form action="/admin/y"  method="post" class="p-5 bg-white" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-header">
-                    <h4 class="modal-title">Add New Users</h4>
+                    <h4 class="modal-title">Add New Category</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">

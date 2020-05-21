@@ -9,6 +9,6 @@ class testController extends Controller
     //
     public function main()
     {
-        return view('test');
+        return view('shit');
     }
 }
