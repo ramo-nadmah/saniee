@@ -48,7 +48,7 @@ Route::group(['middleware'=>['guest']],function()
     Route::get('/login', 'LoginController@main')->name('login');
     Route::post('/login', 'LoginController@login');
 });
-Route::get('logout_user','LoginController@userlogout');
+Route::get('logout_user','LoginController@userlogout' );
 
 
 Route::group(['middleware'=>['auth:admin']],function()
