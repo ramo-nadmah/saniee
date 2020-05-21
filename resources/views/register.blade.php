@@ -18,7 +18,7 @@
 
                     <div class="row justify-content-center mt-5">
                         <div class="col-md-8 text-center">
-                            <h1>Register</h1>
+                            <h1>Register as buyer</h1>
                         </div>
                     </div>
 

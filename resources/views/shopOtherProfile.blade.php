@@ -154,6 +154,7 @@
     <div class="col-sm-7">
         <div class="container" id="container1">
 
+
         </div>
     </div>
 </div>
@@ -172,7 +173,12 @@
             <div class="col-sm-2"></div>
         </div>
     </div>
+
+
+
 </div>
+
+
 
 
 
@@ -235,7 +241,7 @@
                             (
 
                                 function(){
-                                    document.getElementById("follow").innerHTML = " Following";
+                                    document.getElementById("follow").innerHTML = " Unfollow";
                                     document.getElementById("follow").className =
                                         "btn btn-outline-primary font-weight-light btn-lg";
 
@@ -295,7 +301,7 @@
 
 
 
-    page = 5;
+    page = 1;
     rows = 3;
     w = 5;
 
@@ -323,6 +329,8 @@
             container.innerHTML = last_cards;
             //console.log(data.querySet);
         }
+        container.style.display ="block";
+
     }
 
     function build_pagination(data) {
@@ -360,6 +368,8 @@
         if (page != data.pages) {
             container.innerHTML += `<button id=${data.pages} onclick="chose_page(this.id);" class="btn btn-sm btn-info m-1">Last &#187;</button>`;
         }
+
+
     }
 
     function chose_page(page_num) {
@@ -373,8 +383,15 @@
         var data = pagination(cards, page, rows);
 
         build_cards(data);
-        build_pagination(data);
+        if(true){
+            build_pagination(data);
+        }
+
+
     }
+
     build_page();
+
+
 </script>
 </html>

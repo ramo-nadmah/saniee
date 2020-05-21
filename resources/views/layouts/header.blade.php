@@ -13,24 +13,19 @@
     <div class="row align-items-center">
 
         <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="/" class="text-black mb-0">Classy<span class="text-primary">Ads</span>  </a></h1>
+            <h1 class="mb-0 site-logo"><a href="/" class="text-black mb-0">sanayi<span class="text-primary">Tools</span>  </a></h1>
         </div>
         <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
                 <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                     <li class="active"><a href="/">Home</a></li>
-                    <li><a href="single">Ads</a></li>
-                    <li class="has-children">
+
+                    <li>
                         <a href="about">About</a>
-                        <ul class="dropdown">
-                            <li><a href="#">The Company</a></li>
-                            <li><a href="#">The Leadership</a></li>
-                            <li><a href="#">Philosophy</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
+
                     </li>
-                    <li><a href="blog">Blog</a></li>
+
                     <li><a href="contact">Contact</a></li>
 
 

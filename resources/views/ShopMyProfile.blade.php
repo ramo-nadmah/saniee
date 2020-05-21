@@ -13,7 +13,7 @@
         <div class="col-sm-10">
             <div class="card">
                 <div class="card-body row">
-                    <img class="img col-sm-4" src="user.png" alt="sans" />
+                    <img class="img col-sm-4" src="/images/user.png" alt="sans" />
                     <div class="col-sm-8">
                         <div class="row">
                             <a href="ad_details.html">
@@ -222,37 +222,40 @@
                         <nav class="col-sm-2"></nav>
                     </nav>
 
-                    <div class="row" style="margin-top: 4px; margin-left: 300px;">
-                        <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-3">
                             <div class="container" id="drop_url2" style="display: none;">
                                 <label for="drop1">change category  :</label>
 
                                 <select  id="f_url2" style="width: 150px;">
                                     <option value="..." disabled selected value>...</option>
-                                  @foreach($categories as $category)
-                                    <option value="{{$category->id}}">{{$category->name}}</option>
-                                  @endforeach
+                                    @foreach($categories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
+
                         </div>
                         <div class="col-sm-4">
-                            <div class="row" style="margin-left: 3px;">
-                                <h4>Shop Category :</h4>
-                                <a href="/ads={{$shop->category_id}}" id="category" style="margin-left: 10px;">{{$shop->category->name}}</a>
+                            <div class="row">
 
+                                <h4>adress : </h4>
+                                <a href="/ads={{$shop->category_id}}" id="category" style="margin-left: 10px;">{{$shop->category->name}}</a>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="row">
-                                <h4>Email</h4>
+                                <h4>Email : </h4>
                                 <p>{{$shop->email}}</p>
                             </div>
                         </div>
                     </div>
 
+                    <div class="row py-4">
+                        <div class="col-lg-3">
 
-                    <div class="row" style="margin-top: 10px; margin-left: 300px;">
-                        <div class="col-sm-6">
+                        </div>
+                        <div class="col-sm-2">
                             <div class="container" id="drop_url1" style="display: none;">
                                 <label for="drop1">Change address 1 :</label>
 
@@ -273,14 +276,20 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-7">
                             <div class="row" style="margin-left: 3px;">
                                 <h4>Address:</h4>
                                 <h1 id="address" style="margin-left: 10px;">{{$shop->address}}</h1>
                             </div>
                         </div>
 
+
                     </div>
+
+
+
+
+
 
                     <div class="row">
                         <p class="col-sm-12" id="paragZ">
@@ -361,7 +370,7 @@
 <div class="row">
     <div class="container" id="ads_card" style="display: none;">
         <div class="row">
-            <div class="col-sm-2"></div>
+            <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <div class="container" id="container1">
                     <div class="container" id="nothing" style="display: none;">
@@ -377,12 +386,13 @@
 
                 </div>
             </div>
+            <div class="col-sm-1"></div>
 
         </div>
         <div class="row">
             <div class="container">
                 <div class="row" style="margin-top: 50px;">
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-8">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center" id="pagintaion_bar" style="margin-left: 260px;">
@@ -390,7 +400,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3"></div>
                 </div>
             </div>
         </div>
@@ -398,7 +408,7 @@
 
     <div class="container" id="favorate_card" style="display: none;">
         <div class="row">
-            <div class="col-sm-2"></div>
+            <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <div class="container" id="container2" >
                     <div class="container" id="nothing2" style="display: none;">
@@ -413,12 +423,13 @@
 
                 </div>
             </div>
+            <div class="col-sm-1"></div>
 
         </div>
         <div class=" row">
             <div class="container">
                 <div class="row" style="margin-top: 50px;">
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-8">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center" id="pagintaion_bar2" style="margin-left: 260px;">
@@ -426,7 +437,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3"></div>
                 </div>
             </div>
         </div>
@@ -434,7 +445,7 @@
 
     <div class="container" id="following_card" style="display: none;">
         <div class="row">
-            <div class="col-sm-2"></div>
+            <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <div class="container" id="container3">
                     <div class="container" id="nothing3" style="display: none;">
@@ -450,12 +461,13 @@
 
                 </div>
             </div>
+            <div class="col-sm-1"></div>
 
         </div>
         <div class="row">
             <div class="container">
                 <div class="row" style="margin-top: 50px;">
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-8">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center" id="pagintaion_bar3" style="margin-left: 260px;">
@@ -463,7 +475,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3"></div>
                 </div>
             </div>
         </div>
@@ -1212,7 +1224,7 @@
     function chose_show(x) {
         if (x == '1') {
             document.getElementById("ads_card").style.display = "block";
-            document.getElementById("following_card").style.display = "none";
+            documenpt.getElementById("following_card").style.display = "none";
             document.getElementById("favorate_card").style.display = "none";
         } else {
             if (x == '2') {

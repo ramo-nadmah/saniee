@@ -28,7 +28,7 @@
 
     @include('layouts.header')
 
-    <div class="site-blocks-cover overlay" style="background-image: url(images/home_pic.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover overlay" style="background-image: url(/images/home_pic.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
                 <div class="col-md-12">
@@ -167,7 +167,7 @@
                                                         <h6 class="">category :</h6>
                                                     </div>
                                                     <div class="col-lg-6">
-                                                        <h6 class="border font-weight-light cat_card1">{{$post->categories->name}}</h6>
+                                                        <h6 class="border font-weight-light cat_card1">{{$post->category->name}}</h6>
                                                     </div>
                                                 </div>
                                             </div>
