@@ -97,8 +97,8 @@
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <div class="card">
-                    <div class="card-body row">
-                        <p class="id"></p>
+                    <div class="card-body row" style="display: none;">
+                        <p class="id" ></p>
                     </div>
                     <div class="card-body row">
                         <img class="img col-sm-4" src="user.png" alt="sans" />
@@ -111,29 +111,16 @@
                                     <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                                         industry's standard dummy text ever since the 1500s,</p>
                                 </div>
-                                <img class="img2 col-sm-3 rounded-circle" src="user.png" alt="sans" />
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <a id="url_2" class="url_1" href="#">Click here</a>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <a class="url_2" href="#">Click here</a>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <a class="url_3" href="#">Click here</a>
-                                    </div>
+
+
+
                                 </div>
-                                <div class="row" style="margin-top: 20px;">
-                                    <div class="col-sm-4">
-                                        <button type="button1 button" class="btn btn-outline-secondary">go somewhere</button>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <button type="button2 button" class="btn btn-outline-secondary">go somewhere</button>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <button type="button3 button" class="btn btn-outline-secondary">go somewhere</button>
-                                    </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a id="url_2" class="url_1" href="#">Take me thier</a>
                                 </div>
+
+                            </div>
                             </div>
 
                         </div>
