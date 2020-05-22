@@ -35,8 +35,8 @@ Route::group(['middleware'=>['guest:shop']],function() {
 
 });
 Route::group(['middleware'=>['auth:shop']],function() {
-Route::get('logout_shop','ShopLoginController@shoplogout');
-Route::get('/addAd','AdsController@addPost');
+    Route::get('logout_shop','ShopLoginController@shoplogout');
+    Route::get('/addAd','AdsController@addPost');
 });
 
 Route::group(['middleware'=>['guest']],function()
