@@ -34,10 +34,10 @@
 
             <div class="row mb-5">
                 <div class="col-md-4 ml-auto">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eveniet laudantium dignissimos atque labore excepturi perspiciatis ut fugit eius itaque iste quibusdam dolore consectetur reprehenderit. Illum molestiae nemo culpa optio.</p>
+
                 </div>
                 <div class="col-md-4">
-                    <p>Similique neque facere cum! Et esse natus qui fugiat temporibus voluptate debitis similique eos illum pariatur suscipit placeat omnis perferendis ab enim quis eligendi minima explicabo aperiam. Eaque minus itaque?</p>
+
                 </div>
             </div>
 
@@ -48,28 +48,28 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/person_1.jpg" alt="Image" class="img-fluid mb-3">
+                    <img src="images/safwan_shboul.jpg" alt="Image" class="img-fluid mb-3">
                     <h3 class="h4">Safwan Sbhoul</h3>
                     <p class="caption mb-3 text-primary">Front end web developer</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum facilis, sint libero commodi tenetur ducimus accusantium inventore.</p>
+
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/person_2.jpg" alt="Image" class="img-fluid mb-3">
+                    <img src="images/omar_hamdan.jpg" alt="Image" class="img-fluid mb-3">
                     <h3 class="h4">omar hamdan</h3>
                     <p class="caption mb-3 text-primary">back end web developer</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam voluptas autem qui alias officia eligendi, nam in.</p>
+
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/person_3.jpg" alt="Image" class="img-fluid mb-3">
+                    <img src="images/omar_qaseer.jpg" alt="Image"  class="img-fluid mb-3">
                     <h3 class="h4">omar alqaseer</h3>
                     <p class="caption mb-3 text-primary">android developer</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore animi quam, est vero. Omnis sunt, totam qui!</p>
+
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/person_4.jpg" alt="Image" class="img-fluid mb-3">
+                    <img src="images/ehab_saeed.jpg" alt="Image" class="img-fluid mb-3">
                     <h3 class="h4">ehab al saeed</h3>
                     <p class="caption mb-3 text-primary">android developer</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae exercitationem voluptatum, laboriosam unde ipsam modi iusto, numquam?</p>
+
                 </div>
             </div>
 
