@@ -748,7 +748,7 @@
         cards_s[i].getElementsByClassName("title")[0].innerHTML ="<?php echo $post->name ?>";
         cards_s[i].getElementsByClassName("slogan")[0].innerHTML ="<?php echo $post->slogan ?>";
         cards_s[i].getElementsByClassName("price")[0].innerHTML ="<?php echo $post->price ?>";
-        cards_s[i].getElementsByClassName("img")[0].src="/images/<?php echo App\Image::where('post_id',$post->id)->pluck('image')->first()?> ?>";
+        cards_s[i].getElementsByClassName("img")[0].src="/images/<?php echo App\Image::where('post_id',$post->id)->pluck('image')->first() ?>";
         // /* get the image src/
         cards_s[i].getElementsByClassName("url")[0].href = "/single=<?php echo $post->id ?>";
 
@@ -1219,29 +1219,36 @@
         }
     }
 
-    var b = '<?php echo $flag ?>';
+
 
     function chose_show(x) {
-        if (x == '1') {
-            document.getElementById("ads_card").style.display = "block";
-            documenpt.getElementById("following_card").style.display = "none";
+        if (x == '0') {
+            document.getElementById("ads_card").style.display = "none";
+            document.getElementById("following_card").style.display = "none";
             document.getElementById("favorate_card").style.display = "none";
-        } else {
-            if (x == '2') {
+        }
+        else if(x == '1'){
+            document.getElementById("ads_card").style.display = "block";
+            document.getElementById("following_card").style.display = "none";
+            document.getElementById("favorate_card").style.display = "none";
+        } else if (x == '2') {
                 document.getElementById("ads_card").style.display = "none";
                 document.getElementById("following_card").style.display = "block";
                 document.getElementById("favorate_card").style.display = "none";
 
-            } else {
-                document.getElementById("ads_card").style.display = "none";
-                document.getElementById("following_card").style.display = "none";
-                document.getElementById("favorate_card").style.display = "block";
+        } else if(x == '3'){
+            document.getElementById("ads_card").style.display = "none";
+            document.getElementById("following_card").style.display = "none";
+            document.getElementById("favorate_card").style.display = "block";
 
-            }
         }
+
     }
 
 
+    var  b = '<?php echo $flag ?>';
+    console.log(b);
+    chose_show(b);
     build_page();
     build_page2();
     build_page3();
