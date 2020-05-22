@@ -1240,7 +1240,7 @@
             }
         }
     }
-    chose_show(b);
+
 
     build_page();
     build_page2();
