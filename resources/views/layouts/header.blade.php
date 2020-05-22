@@ -95,7 +95,7 @@
                     @elseif(Auth::guard('shop')->check())
                         <li class="ml-xl-3 login"><span class="border-left pl-xl-4"></span></li>
                         <li class="has-children">
-                            <a href="#">
+                            <a href="/myShop={{Auth::guard('shop')->user()->id}}_0">
                                 <div class="row align-items-center">
                                     <div class="col-sm-6">
                                         <h5 class="text-left">shop({{Auth::guard('shop')->user()->name}})</h5>
