@@ -104,8 +104,8 @@
                 <hr />
                 <div class="row" style="margin-top: 20px;">
 
-                    {{--                        @if(Auth::guard('shop')->user()->id != $post->shop->id)--}}
-
+{{--                @if(Auth::guard('shop')->user()->id != $post->shop->id)--}}
+                    @if(Auth::guard('web')->check() && Auth::guard('shop')->check())
                         <button
                             type="button"
                             id="follow"
@@ -138,7 +138,7 @@
                                 @endif
                             @endif
                         </button>
-
+                 @endif
                     {{--                        @endif--}}
 
                 </div>
