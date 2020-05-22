@@ -195,12 +195,34 @@
             cards_s[i] = document.getElementById("card1");
             cards_s[i].getElementsByClassName("title")[0].innerHTML ="<?php echo $shop->name ?>"
 
-            cards_s[i].getElementsByClassName("titlehref")[0].href ="/shop=<?php echo $shop->id ?>"
+
             cards_s[i].getElementsByClassName("description")[0].innerHTML ="<?php echo $shop->description ?>"
             cards_s[i].getElementsByClassName("id")[0].innerHTML ="<?php echo $shop->id ?>";
             cards_s[i].getElementsByClassName("img")[0].src="images/<?php echo $shop->logo ?>";
             // /* get the image src/
-            cards_s[i].getElementsByClassName("url_1")[0].href = "/shop=<?php echo $shop->id ?>";
+<?php
+    if(Auth::guard('shop')->check())
+            {
+                if(Auth::guard('shop')->user()->id == $shop->id )
+                    {
+?>
+                        cards_s[i].getElementsByClassName("url_1")[0].href = "/myShop=<?php echo $shop->id ?>_0";
+                        cards_s[i].getElementsByClassName("titlehref")[0].href ="/myShop=<?php echo $shop->id ?>_0";
+<?php
+                    }
+            }
+            else
+            {
+?>
+                cards_s[i].getElementsByClassName("titlehref")[0].href ="/shop=<?php echo $shop->id ?>";
+                cards_s[i].getElementsByClassName("url_1")[0].href ="/shop=<?php echo $shop->id ?>";
+<?php
+            }
+
+
+?>
+
+
             cards_s[i].getElementsByClassName("url_1")[0].innerHTML = "take m there";
 
             // / change the href value/
