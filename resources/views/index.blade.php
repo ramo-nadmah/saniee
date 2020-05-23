@@ -4,7 +4,7 @@
     <title>ClassyAds &mdash; Colorlib Website Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    @include('layouts.head')
+{{--    @include('layouts.head')--}}
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -202,7 +202,7 @@
                         <div class="card card_it">
                             <img class="card-img-top card_image rounded" src="/images/{{$category->logo}}">
                             <div class="card-body  text-center">
-                                <h5 class="card-title font-weight-normal font-italic text-center">{{$category->name}}</h5>
+                                <h5 class="card-title font-weight-normal font-italic text-center" style="">{{$category->name}}</h5>
                             </div>
                         </div>
                     </a>
