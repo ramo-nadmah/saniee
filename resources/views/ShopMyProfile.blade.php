@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    @include('layouts.head')
 
-@include('layouts.head')
+</head>
 <body>
 
 
@@ -16,25 +18,25 @@
                     <img class="img col-sm-4" src="/images/user.png" alt="sans" />
                     <div class="col-sm-8">
                         <div class="row">
-                            <a href="ad_details.html">
-                                <h3 class="title row">page_1</h3>
-                            </a>
+
+                                <h3 class="title row pl-3">page_1</h3>
+
                         </div>
-                        <div class="row">
 
 
-                            <div class="row">
 
-                                <div class="col-sm-6 ">
+
+
+                                <div class="row">
                                     Slogan:   <p class="slogan" >Click here</p>
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="row">
                                     Price:    <p class="price" >Click here</p>
                                 </div>
 
-                            </div>
 
-                        </div>
+
+
                         <div class="row">
                             <div class="col-sm-12">
                                 <a href="#" class="url">see post</a>
@@ -314,19 +316,19 @@
                     <hr />
                     <div class="row">
                         <div class="col-sm-4">
-                            <div class="container" id="ads_word" style="display: block;">
-                                <a href="#" onclick="show_ads()" class="font-weight-light">Ads</a>
+                            <div class="container " id="ads_word" style="">
+                                <a href="#" onclick="show_ads()"  class="font-weight-light a_link">Ads</a>
                                 <p class="font-weight-bold">{{$post_number}}</p>
                             </div>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="container" id="Favorites_word" style="display: block;">
-                                <a href="#" onclick="show_Favorites()" class="font-weight-light">Favorites</a>
+                        <div class="col-sm-4 ">
+                            <div class="container " id="Favorites_word" style="display: block;">
+                                <a href="#" onclick="show_Favorites()" class="font-weight-light a_link">Favorites</a>
                                 <p class="font-weight-bold">{{$favorite_number}}</p>
                             </div>
                         </div>
                         <div class="col-sm-4">
-                            <a href="#" onclick="show_Follwing()" class="font-weight-light">Follwing</a>
+                            <a href="#" onclick="show_Follwing()"  class="font-weight-light a_link">Follwing</a>
                             <p class="font-weight-bold">{{$follow_number}}</p>
                         </div>
                     </div>
@@ -376,9 +378,9 @@
                     <div class="container" id="nothing" style="display: none;">
                         <div class="row">
                             <div class="col-md-12 d-flex justify-content-center">
-                                <p>
+                                <h1 class="p-5">
                                     there is noting
-                                </p>
+                                </h1>
                             </div>
                         </div>
                     </div>
@@ -414,9 +416,9 @@
                     <div class="container" id="nothing2" style="display: none;">
                         <div class="row">
                             <div class="col-md-12 d-flex justify-content-center">
-                                <p>
+                                <h1 class="p-5">
                                     there is noting
-                                </p>
+                                </h1>
                             </div>
                         </div>
                     </div>
@@ -451,9 +453,9 @@
                     <div class="container" id="nothing3" style="display: none;">
                         <div class="row">
                             <div class="col-md-12 d-flex justify-content-center">
-                                <p>
+                                <h1 class="p-5 font-weight-lighter">
                                     there is noting
-                                </p>
+                                </h1>
                             </div>
                         </div>
                     </div>
