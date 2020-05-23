@@ -176,15 +176,20 @@
                     </div>
 
 
-                    <div class="row">
 
-                        <div class="col-sm-4">
-                            <div class="row">
-                                <h4>email : </h4>
-                                <p> {{Auth::guard('web')->user()->email}}</p>
+
+                            <div class="row p-5">
+                                <div class="col-sm-4"></div>
+                                <div class="col-sm-4">
+                                    <div class="row">
+                                        <h3>Email : </h3>
+                                        <h4 class="pl-3"> {{Auth::guard('web')->user()->email}}</h4>
+                                    </div>
+
                             </div>
-                        </div>
-                    </div>
+                            </div>
+
+
 
                     <div class="row">
                         <div class="col-sm-1"></div>
@@ -207,16 +212,17 @@
 
                         <div class="col-sm-6">
                             <div class="container" id="Favorites_word" style="display: block;">
-                                <a href="#" onclick="show_Favorites()" class="font-weight-light">Favorites</a>
+
+                                <a href="#" onclick="show_Favorites()" class="font-weight-light"><h3>Favorites</h3></a>
                                 <p class="font-weight-bold">{{$favorite_number}}</p>
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <a href="#" onclick="show_Follwing()" class="font-weight-light">Follwing</a>
+                            <a href="#" onclick="show_Follwing()" class="font-weight-light"><h3>Follwing</h3></a>
                             <p class="font-weight-bold">{{$follow_number}}</p>
                         </div>
                     </div>
-                    <hr />
+
 
 
                     <div class="col-sm-2"></div>
@@ -241,9 +247,9 @@
                     <div class="container" id="nothing2" style="display: none;">
                         <div class="row">
                             <div class="col-md-12 d-flex justify-content-center">
-                                <p>
+                                <h3>
                                     there is noting
-                                </p>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -278,9 +284,9 @@
                     <div class="container" id="nothing3" style="display: none;">
                         <div class="row">
                             <div class="col-md-12 d-flex justify-content-center">
-                                <p>
+                                <h3>
                                     there is noting
-                                </p>
+                                </h3>
                             </div>
                         </div>
                     </div>
