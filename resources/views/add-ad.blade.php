@@ -7,7 +7,7 @@
     <div class="site-wrap">
         @include('layouts.header')
 
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover  overlay" style="background-image: url(/static_images/newspaper.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
 
@@ -115,8 +115,8 @@
                                     <p class="text-nowrap " style="width: 120rem;clear: both;display: inline-block;overflow: hidden;white-space: nowrap;">* Use real images for the products you want to sale</p>
                                 </div>
                                 <div class="row">
-                                    <img   height="105" width="120" src="images/fake_hammer.png" class="rounded mx-auto d-block">
-                                    <img  height="105" width="120" src="images/real_hammer.jpg" class="rounded mx-auto d-block">
+                                    <img   height="105" width="120" src="static_images/fake_hammer.png" class="rounded mx-auto d-block">
+                                    <img  height="105" width="120" src="static_images/real_hammer.jpg" class="rounded mx-auto d-block">
                                 </div>
                             </div>
 
@@ -125,7 +125,7 @@
                             <a href="#">
                                 <div class="container border border-secondary mb-1">
                                     <div class="row pt-5">
-                                        <img height="50" width="50" src="images/camera.png" class="rounded mx-auto d-block">
+                                        <img height="50" width="50" src="static_images/camera.png" class="rounded mx-auto d-block">
                                     </div>
                                     <div class="row form-group">
                                         <div class="col-md-12">
