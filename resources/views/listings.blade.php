@@ -45,17 +45,17 @@
 
 
 
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover  overlay" style="background-image: url(/static_images/shops_street2.jpg); " data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
 
-                <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-md-12" data-aos="fade-up" data-aos-delay="800">
 
 
                     <div class="row justify-content-center mt-5">
-                        <div class="col-md-8 text-center">
-                            <h1>{{$name}} Listings</h1>
-                            <p class="mb-0">Choose your shop </p>
+                        <div class="col-md-12 text-center">
+                            <h1>{{$name}} Shops</h1>
+
                         </div>
                     </div>
 
@@ -229,14 +229,14 @@
         {
 ?>
             cards_s[i] = document.getElementById("card1");
-            cards_s[i].getElementsByClassName("title")[0].innerHTML ="<?php echo $shop->name ?>"
+            cards_s[i].getElementsByClassName("title")[0].innerHTML ="<?php echo $shop->name ?>";
             //you will work here
-            cards_s[i].getElementsByClassName("followers_num")[0].innerHTML ="6"
-            cards_s[i].getElementsByClassName("address_s")[0].innerHTML ="6"
+            cards_s[i].getElementsByClassName("followers_num")[0].innerHTML ="<?php echo App\Follower::where('follow_id',$shop->id)->count() ?>";
+            cards_s[i].getElementsByClassName("address_s")[0].innerHTML ="<?php echo $shop->address ?>"
 
 
 
-            cards_s[i].getElementsByClassName("description")[0].innerHTML ="<?php echo $shop->description ?>"
+            cards_s[i].getElementsByClassName("description")[0].innerHTML ="<?php echo $shop->description ?>";
             cards_s[i].getElementsByClassName("id")[0].innerHTML ="<?php echo $shop->id ?>";
             cards_s[i].getElementsByClassName("img")[0].src="images/<?php echo $shop->logo ?>";
 
@@ -351,7 +351,9 @@
         if (page != data.pages) {
             container.innerHTML += `<button id=${data.pages} onclick="chose_page(this.id);" class="btn btn-sm btn-info m-1">Last &#187;</button>`;
         }
-        var l =1;
+
+        var l =<?php echo $cat_shop_num ?>;
+        console.log('L =',l);
         if(l==0){
             container.style.display = "none";
         }
