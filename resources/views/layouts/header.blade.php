@@ -176,7 +176,7 @@
                             <a href="#">
                                 <div class="row align-items-center">
                                     <div class="col-sm-12">
-                                        <h5 class="text-left">Worker({{Auth::guard('admin')->user()->name}})</h5>
+                                        <h5 class="text-left">Admin({{Auth::guard('admin')->user()->name}})</h5>
                                     </div>
 
 
