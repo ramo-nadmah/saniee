@@ -18,7 +18,7 @@ class ProfileController extends Controller
         $posts=Post::all()->where('shop_id','=',$id);
         $post_number=Post::all()->where('shop_id','=',$id)->count();
         $favorite_number=Favorite::all()->where('shop_id','=',$id)->count();
-        $follow_number=Follower::all()->where('shop_id','=',$id)->count();
+        $follow_number=Follower::all()->where('follow_id','=',$id)->count();
         return view('shopOtherProfile',compact(['shop','posts','post_number','favorite_number','follow_number']));
     }
     //
@@ -31,7 +31,7 @@ class ProfileController extends Controller
         $categories=Category::all();
         $post_number=Post::all()->where('shop_id','=',$id)->count();
         $favorite_number=Favorite::all()->where('shop_id','=',$id)->count();
-        $follow_number=Follower::all()->where('shop_id','=',$id)->count();
+        $follow_number=Follower::all()->where('follow_id','=',$id)->count();
         return view('shopMyProfile',compact(['flag','categories','shop','posts','favorites','followings','post_number','favorite_number','follow_number']));
 
     }
