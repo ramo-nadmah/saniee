@@ -9,7 +9,7 @@
     @include('layouts.header')
 
 
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover  overlay" style="background-image: url(/static_images/rigist.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
 
@@ -81,6 +81,17 @@
                                 <select name="address" id="category" class="form-control">
 
                                         <option value="amman">amman</option>
+                                    <option value="Ajloun">Ajloun</option>
+                                    <option value="Jerash">Jerash</option>
+                                    <option value="Mafraq">Mafraq</option>
+                                    <option value="Balqa">Balqa</option>
+                                    <option value="Irbid">Irbid</option>
+                                    <option value="Zarqa">Zarqa</option>
+                                    <option value="Madaba">Madaba</option>
+                                    <option value="Karak">Karak</option>
+                                    <option value="Tafilah">Tafilah</option>
+                                    <option value="Ma'an">Ma'an</option>
+                                    <option value="Aqaba">Aqaba</option>
 
                                 </select>
                             </div>
