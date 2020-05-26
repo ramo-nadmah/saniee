@@ -19,7 +19,7 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
                 <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                    <li class="active"><a href="/">Home</a></li>
+                    <li ><a href="/">Home</a></li>
 
                     <li>
                         <a href="about">About</a>

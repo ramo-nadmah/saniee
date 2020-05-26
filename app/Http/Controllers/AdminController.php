@@ -90,13 +90,16 @@ class AdminController extends Controller
                 Image::truncate();
                 return redirect("/admin");
             } else {
-                $category=Category::where('id', '=', $request->id);
-                $category->shops->delete();
-                Follower::where('follow_id','=',Shop::where('category_id','=',$request->id)->value('id'))->orWhere('shop_id',shop::where('category_id','=',$request->id)->value('id'))->delete();
-                $category->posts->delete();
-                $category->posts->favorites->delete();
-                $category->posts->images->delete();
-                $category->delete();
+
+                $category=Category::find($request->id)->dump();
+
+//                Follower::where('follow_id','=',Shop::where('category_id','=',$request->id)->value('id'))->orWhere('shop_id',shop::where('category_id','=',$request->id)->value('id'))->delete();
+
+//                $category->posts()->favorites()->delete();
+//                $category->posts()->images()->delete();
+//                $category->posts()->delete();
+//                $category->shops()->delete();
+//                $category->delete();
                 }
         }
         else if($request->flag=='z')

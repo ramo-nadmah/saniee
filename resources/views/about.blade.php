@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 @include('layouts.head')
+<head>
+    <style>
+        .image_s{
+            width: 250px;
+            height: 220px;
+        }
+    </style>
+</head>
 <body>
 
 <div class="site-wrap">
@@ -48,25 +56,25 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/safwan_shboul.jpg" alt="Image" class="img-fluid mb-3">
+                    <img src="images/safwan_shboul.jpg" alt="Image" class="img-fluid mb-3 image_s">
                     <h3 class="h4">Safwan Sbhoul</h3>
                     <p class="caption mb-3 text-primary">Front end web developer</p>
 
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/omar_hamdan.jpg" alt="Image" class="img-fluid mb-3">
+                    <img src="images/omar_hamdan.jpg" alt="Image" class="img-fluid mb-3 image_s">
                     <h3 class="h4">omar hamdan</h3>
                     <p class="caption mb-3 text-primary">back end web developer</p>
 
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/omar_qaseer.jpg" alt="Image"  class="img-fluid mb-3">
+                    <img src="images/omar_qaseer.jpg" alt="Image"  class="img-fluid mb-3 image_s">
                     <h3 class="h4">omar alqaseer</h3>
                     <p class="caption mb-3 text-primary">android developer</p>
 
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/ehab_saeed.jpg" alt="Image" class="img-fluid mb-3">
+                    <img src="images/ehab_saeed.jpg" alt="Image" class="img-fluid mb-3 image_s">
                     <h3 class="h4">ehab al saeed</h3>
                     <p class="caption mb-3 text-primary">android developer</p>
 

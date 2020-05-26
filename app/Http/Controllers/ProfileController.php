@@ -38,11 +38,14 @@ class ProfileController extends Controller
 
     public function edit(Request $request)
     {
+
        // axios.get("editMyProfile?shop_id="+shop_id+"&description="+paragraphH.innerText+"&name="+title.innerHTML+"&phone="+call_btn.innerHTML+"&address="+selec_val+"&category="+selec_val2)
+
+
         Shop::where('id',$request->shop_id)->update
         (
             [
-//                'price'=>$request->price,
+//              'price'=>$request->price,
                 'name'=>$request->name,
                 'phone'=>$request->phone,
                 'description'=>$request->description,

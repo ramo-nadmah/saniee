@@ -12,7 +12,16 @@
 
 
     <link rel="stylesheet" href="css/index.css">
+<style
+    >
+    .black-text{
+        color: #202f65;
+    }
+    .card_it{
+        max-height:300px;
 
+    }
+</style>
 </head>
 <body>
 
@@ -35,9 +44,9 @@
 
 
                     <div class="row justify-content-center mb-4">
-                        <div class="col-md-8 text-center">
-                            <h1 class="" data-aos="fade-up">Largest Classifieds In The World</h1>
-                            <p data-aos="fade-up" data-aos-delay="100">You can buy, sell anything you want.</p>
+                        <div class="col-md-10 text-center">
+                            <h1 class="" data-aos="fade-up">The largest gathering for stores in Jordan</h1>
+                            <p data-aos="fade-up" data-aos-delay="100">You can buy, sell and search anything you want.</p>
                         </div>
                     </div>
 
@@ -192,7 +201,7 @@
             <div class="row justify-content-center mb-5">
                 <div class="col-md-7 text-center border-primary">
                     <h2 class="font-weight-light text-primary">Categorys</h2>
-                    <p class="color-black-opacity-5">Lorem Ipsum Dolor Sit Amet</p>
+                    <p class="color-black-opacity-5">find your shops here</p>
                 </div>
             </div>
             <div class="row px-2 py-1">
@@ -202,7 +211,7 @@
                         <div class="card card_it">
                             <img class="card-img-top card_image rounded" src="/images/{{$category->logo}}">
                             <div class="card-body  text-center">
-                                <h5 class="card-title font-weight-normal font-italic text-center" style="">{{$category->name}}</h5>
+                                <h5 class="card-title font-weight-normal font-italic text-center black-text" style="">{{$category->name}}</h5>
                             </div>
                         </div>
                     </a>

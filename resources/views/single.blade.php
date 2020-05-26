@@ -693,7 +693,7 @@
                             (
 
                                 function(){
-                                    document.getElementById("follow").innerHTML = " Following";
+                                    document.getElementById("follow").innerHTML = "Unfollow";
                                     document.getElementById("follow").className =
                                         "btn btn-outline-primary font-weight-light btn-lg";
 

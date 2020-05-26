@@ -27,8 +27,8 @@
     </div>
 
         <div class="container border border-primary" style="margin-bottom: 50px;">
-            <div class="row" style="background-color: #3392d8;">
-                <h4 class="p-3 text-light">Add an announcement for free</h4>
+            <div class="row" style="background-color: #30e3ca;">
+                <h4 class="p-3 text-dark">Add an announcement for free</h4>
             </div>
 
 
@@ -182,7 +182,7 @@
 
 
                 <div class="row py-4">
-                    <button type="submit" class="btn btn-warning btn-lg mx-auto d-block"  style="margin-left: 70px; width: 300px;">save and post</button>
+                    <button type="submit" class="btn  btn-lg mx-auto d-block text-light"  style="margin-left: 70px; width: 300px;background-color: #285943;">save and post</button>
                 </div>
                 <strong class="text-danger">{!! session()->get('error') !!}</strong>
             </form>
