@@ -67,16 +67,21 @@ class AdminController extends Controller
     {
         if($request->flag=='x') {
             if ($request->id == -1) {
-                $user=User::all();
-                $user->favorites->delete();
-                $user->followings->delete();
+//                $user=User::all();
+                Favorite::where('user_id',$request->id)->delete();
+                Follower::where('user_id',$request->id)->delete();
+//                $user->favorites->delete();
+//                $user->followings->delete();
                 User::truncate();
 
                 return redirect("/admin");
             } else {
-                $user=User::where('id', '=', $request->id);
-                $user->followings->delete();
-                $user->favorites->delete();
+                $user=User::where('id', '=', $request->id)->get();
+                Follower::where('user_id',$request->id)->delete();
+                Favorite::whre('user_id',$request->id)->delete();
+
+//                $user->followings->delete();
+//                $user->favorites->delete();
                 $user->delete();
             }
         }elseif($request->flag=='y')
@@ -90,14 +95,23 @@ class AdminController extends Controller
                 Image::truncate();
                 return redirect("/admin");
             } else {
-                $category=Category::where('id', '=', $request->id);
-                $category->shops->delete();
-                Follower::where('follow_id','=',Shop::where('category_id','=',$request->id)->value('id'))->orWhere('shop_id',shop::where('category_id','=',$request->id)->value('id'))->delete();
-                $category->posts->delete();
-                $category->posts->favorites->delete();
-                $category->posts->images->delete();
+                $category=Category::find($request->id);
+                Shop::where('category_id',$request->id)->delete();
+                $posts=Post::where('category_id',$request->id)->value('id');
+                Favorite::where('post_id',$posts)->delete();
+                Image::where('post_id',$posts)->delete();
+
+                Follower::where('follow_id',Shop::where('category_id','=',$request->id)->value('id'))->orWhere('shop_id',shop::where('category_id',$request->id)->value('id'))->delete();
+                Post::where('category_id',$request->id)->delete();
+//              $category->shops->delete();
+//              $category->posts->delete();
+//              $category->posts->favorites->delete();
+//              $category->posts->images->delete();
+//                $posts->delete();
+
+
                 $category->delete();
-                }
+            }
         }
         else if($request->flag=='z')
         {
@@ -109,11 +123,19 @@ class AdminController extends Controller
                 Image::truncate();
                 return redirect("/admin");
             } else {
-                $shop=Shop::where('id', '=', $request->id);
-                $shop->posts->delete();
-                $shop->posts->favorites->delete();
-                Follower::where('follow_id','=',$shop->value('id'))->orWhere('shop_id',$shop->value('id'))->delete();
-                $shop->posts->images->delete();
+                $shop=Shop::find($request->id);
+                $posts=Post::where('shop_id',$request->id)->value('id');
+                Favorite::where('post_id',$posts)->delete();
+                Image::where('post_id',$posts)->delete();
+                Follower::where('follow_id',$shop->value('id'))->orWhere('shop_id',$shop->value('id'))->delete();
+
+
+//                $shop->posts->delete();
+//                $shop->posts->favorites->delete();
+//                $shop->posts->images->delete();
+
+//                $posts->delete();
+                Post::where('shop_id',$request->id)->delete();
                 $shop->delete();
             }
         }
