@@ -603,7 +603,7 @@ h1, h2, h3, h4, h5,
     min-height: 500px;
     height: calc(30vh); }
   .site-blocks-cover h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 400;
     color: #fff; }
     @media (max-width: 991.98px) {
