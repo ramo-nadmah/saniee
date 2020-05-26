@@ -20,11 +20,15 @@ class AdsController extends Controller
     {
         $shops=Shop::all()->where('category_id','=',$id);
         $categories=Category::all();
+
         $name=Category::find($id)->name;
+        $cat_shop_num=Shop::all()->where('category_id','=',$id)->count();
+
+
 //        dd(Post::find(2)->images->get());
 
 
-        return view("listings",compact(['shops','name','categories']));
+        return view("listings",compact(['shops','name','categories','cat_shop_num']));
     }
 
 

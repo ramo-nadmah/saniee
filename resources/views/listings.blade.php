@@ -18,6 +18,23 @@
             white-space: nowrap;
             text-overflow: ellipsis;
         }
+        .image_s{
+            width: 200px;
+            height: 210px;
+        }
+        .card_css{
+            max-height:250px;
+            overflow: hidden;
+        }
+        .title-text{
+            color: #011627;
+        }
+        .dropdown-toggle{
+            background-color: #2b90d9;
+            border-color: #2b90d9;
+        }
+
+
     </style>
 
 </head>
@@ -28,17 +45,17 @@
 
 
 
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover  overlay" style="background-image: url(/static_images/shops_street2.jpg); " data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
 
-                <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
+                <div class="col-md-12" data-aos="fade-up" data-aos-delay="800">
 
 
                     <div class="row justify-content-center mt-5">
-                        <div class="col-md-8 text-center">
-                            <h1>{{$name}} Listings</h1>
-                            <p class="mb-0">Choose your shop </p>
+                        <div class="col-md-12 text-center">
+                            <h1>{{$name}} Shops</h1>
+
                         </div>
                     </div>
 
@@ -96,17 +113,36 @@
         <div class="row collapse show" style="margin-top: 50px;">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
-                <div class="card">
+                <div class="card card_css" >
                     <div class="card-body row" style="display: none;">
                         <p class="id" ></p>
                     </div>
                     <div class="card-body row">
-                        <img class="img col-sm-4" src="user.png" alt="sans" />
+                        <img class="img col-sm-4 image_s" src="user.png" alt="sans" />
                         <div class="col-sm-8">
                             <a class="titlehref" href="">
-                                <h3 class="title row">page_1</h3>
+                                <h3 class="title row title-text">page_1</h3>
                             </a>
-                            <div class="row">
+                            <div class="row pl-3 pt-4">
+                                <div class="col-sm-6 ">
+
+                                    <div class="row">
+                                        <h5>Followers :</h5><h5 class="followers_num pl-3" > 5</h5>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <h5>address :</h5><h5 class="address_s pl-3">5</h5>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="row pt-3">
                                 <div class="paragraph col-sm-9">
                                     <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                                         industry's standard dummy text ever since the 1500s,</p>
@@ -115,41 +151,41 @@
 
 
                                 </div>
-                            <div class="row">
+                            <div class="row pt-3">
                                 <div class="col-sm-12">
-                                    <a id="url_2" class="url_1" href="#">Take me thier</a>
+                                    <a id="url_2" class="url_1" href="#"><h3 class="take-me" >Take me thier</h3></a>
                                 </div>
 
                             </div>
                             </div>
 
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-sm-1"></div>
         </div>
     </div>
-    <div class="container" id="content_container">
-        <nav class="navbar navbar-light bg-light justify-content-between" style="margin-top: 60px;">
+    <nav class="navbar navbar-dark bg-dark justify-content-between   nav-color" >
 
-            <div class="col-sm-4">
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        choose category
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        @foreach($categories as $category)
-                            <a class="dropdown-item" href="/ads={{$category->id}}">{{$category->name}}</a>
-                        @endforeach
-                    </div>
+        <div class="col-sm-4">
+            <div class="dropdown pt-2">
+                <button class="btn btn-secondary dropdown-toggle " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    choose category
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    @foreach($categories as $category)
+                        <a class="dropdown-item" href="/ads={{$category->id}}">{{$category->name}}</a>
+                    @endforeach
                 </div>
-               <ul class="dropdown">
-
-               </ul>
             </div>
+            <ul class="dropdown">
 
-        </nav>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="container " id="content_container">
+
         <div class="container" id="container1"></div>
         <div class="container">
             <div class="row" style="margin-top: 50px;">
@@ -193,12 +229,17 @@
         {
 ?>
             cards_s[i] = document.getElementById("card1");
-            cards_s[i].getElementsByClassName("title")[0].innerHTML ="<?php echo $shop->name ?>"
+            cards_s[i].getElementsByClassName("title")[0].innerHTML ="<?php echo $shop->name ?>";
+            //you will work here
+            cards_s[i].getElementsByClassName("followers_num")[0].innerHTML ="<?php echo App\Follower::where('follow_id',$shop->id)->count() ?>";
+            cards_s[i].getElementsByClassName("address_s")[0].innerHTML ="<?php echo $shop->address ?>"
 
 
-            cards_s[i].getElementsByClassName("description")[0].innerHTML ="<?php echo $shop->description ?>"
+
+            cards_s[i].getElementsByClassName("description")[0].innerHTML ="<?php echo $shop->description ?>";
             cards_s[i].getElementsByClassName("id")[0].innerHTML ="<?php echo $shop->id ?>";
             cards_s[i].getElementsByClassName("img")[0].src="images/<?php echo $shop->logo ?>";
+
             // /* get the image src/
 <?php
     if(Auth::guard('shop')->check())
@@ -223,7 +264,8 @@
 ?>
 
 
-            cards_s[i].getElementsByClassName("url_1")[0].innerHTML = "take m there";
+
+
 
             // / change the href value/
             // console.log("url1 href ", (cards[i].getElementsByClassName("url_1")[0].href));
@@ -309,6 +351,12 @@
         if (page != data.pages) {
             container.innerHTML += `<button id=${data.pages} onclick="chose_page(this.id);" class="btn btn-sm btn-info m-1">Last &#187;</button>`;
         }
+
+        var l =<?php echo $cat_shop_num ?>;
+        console.log('L =',l);
+        if(l==0){
+            container.style.display = "none";
+        }
         /*
         var buttons = new Array();
         for (i = 0; i <= data.pages; i++) {
@@ -351,7 +399,10 @@
         build_cards(data);
         build_pagination(data);
     }
+
+
     build_page();
+
 </script>
 
 </body>

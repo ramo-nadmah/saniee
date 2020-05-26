@@ -95,6 +95,7 @@ class AdminController extends Controller
                 Image::truncate();
                 return redirect("/admin");
             } else {
+
                 $category=Category::find($request->id);
                 Shop::where('category_id',$request->id)->delete();
                 $posts=Post::where('category_id',$request->id)->value('id');
@@ -112,6 +113,7 @@ class AdminController extends Controller
 
                 $category->delete();
             }
+
         }
         else if($request->flag=='z')
         {

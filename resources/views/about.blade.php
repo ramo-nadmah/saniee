@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 @include('layouts.head')
+<head>
+    <style>
+        .image_s{
+            width: 250px;
+            height: 220px;
+        }
+    </style>
+</head>
 <body>
 
 <div class="site-wrap">
@@ -8,7 +16,7 @@
 
 
 
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover  overlay" style="background-image: url(/static_images/about_us3.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
 
@@ -18,7 +26,7 @@
                     <div class="row justify-content-center mt-5">
                         <div class="col-md-8 text-center">
                             <h1>About Us</h1>
-                            <p class="mb-0">sanayi Company</p>
+
                         </div>
                     </div>
 
@@ -48,25 +56,25 @@
             </div>
             <div class="row">
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/safwan_shboul.jpg" alt="Image" class="img-fluid mb-3">
+                    <img src="static_images/safwan_shboul.jpg" alt="Image" class="img-fluid mb-3 image_s">
                     <h3 class="h4">Safwan Sbhoul</h3>
                     <p class="caption mb-3 text-primary">Front end web developer</p>
 
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/omar_hamdan.jpg" alt="Image" class="img-fluid mb-3">
+                    <img src="static_images/omar_hamdan.jpg" alt="Image" class="img-fluid mb-3 image_s">
                     <h3 class="h4">omar hamdan</h3>
                     <p class="caption mb-3 text-primary">back end web developer</p>
 
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/omar_qaseer.jpg" alt="Image"  class="img-fluid mb-3">
+                    <img src="static_images/omar_qaseer.jpg" alt="Image"  class="img-fluid mb-3 image_s">
                     <h3 class="h4">omar alqaseer</h3>
                     <p class="caption mb-3 text-primary">android developer</p>
 
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                    <img src="images/ehab_saeed.jpg" alt="Image" class="img-fluid mb-3">
+                    <img src="static_images/ehab_saeed.jpg" alt="Image" class="img-fluid mb-3 image_s">
                     <h3 class="h4">ehab al saeed</h3>
                     <p class="caption mb-3 text-primary">android developer</p>
 

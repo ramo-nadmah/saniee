@@ -2,6 +2,28 @@
 <html lang="en">
 <head>
     @include('layouts.head')
+    <style>
+        .green-btn{
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        .red-btn{
+            background-color: #E71D36;
+        }
+        .card_css{
+            max-height:250px;
+            overflow: hidden;
+        }
+
+        .image_s{
+            width: 200px;
+            height: 200px;
+        }
+        .image_s2{
+            width: 200px;
+            height: 170px;
+        }
+    </style>
 
 </head>
 <body>
@@ -13,13 +35,13 @@
     <div class="shop row collapse show" id="s" style="margin-top: 50px;">
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
-            <div class="card">
+            <div class="card card_css">
                 <div class="card-body row">
-                    <img class="img col-sm-4" src="/images/user.png" alt="sans" />
+                    <img class="img col-sm-4 image_s2" src="/images/user.png" alt="sans" />
                     <div class="col-sm-8">
                         <div class="row">
 
-                                <h3 class="title row pl-3">page_1</h3>
+                            <a> <h3 class="title row pl-3">page_1</h3></a>
 
                         </div>
 
@@ -27,19 +49,21 @@
 
 
 
-                                <div class="row">
-                                    Slogan:   <p class="slogan" >Click here</p>
-                                </div>
-                                <div class="row">
-                                    Price:    <p class="price" >Click here</p>
+                                <div class="row pt-3">
+                                    <h5>Slogan: </h5>  <h6 class="slogan pl-3 pt-1" >Click here</h6>
                                 </div>
 
 
 
 
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <a href="#" class="url">see post</a>
+
+                        <div class="row pt-3">
+                            <div class="col-sm-6">
+                                <a href="#" class="url"><h4>See post</h4> </a>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="row"><h5>Price: </h5><p class="price" >Click here</p></div>
+
                             </div>
 
                         </div>
@@ -50,10 +74,10 @@
         </div>
         <div class="col-sm-1">
 
-            <button type="button" class="button_container btn btn-danger" id=""
+            <button type="button" class="button_container btn btn-danger .red-btn" id=""
                     onclick="delete_card(this.id);"><i class="fas fa-trash-alt"></i></button>
 
-            <button type="button" class="edit_buuton btn btn-success" id=" ed_btn" value="" onclick="move_to(this.value);"
+            <button type="button" class="edit_buuton btn btn-success green-btn" id=" ed_btn" value="" onclick="move_to(this.value);"
                     style="margin-top: 20px;"><i class="fas fa-edit"></i></button>
 
         </div>
@@ -65,29 +89,32 @@
 
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
-            <div class="card">
+            <div class="card card_css">
                 <div class="card-body row">
-                    <img class="image2 col-sm-4" src="user.png" alt="sans" />
+                    <img class="image2 col-sm-4 image_s" src="user.png" alt="sans" />
                     <div class="col-sm-8">
                         <a class="title_href2" href="#">
                             <h3 class="title2 row">page_1</h3>
                         </a>
-                        <div class="row">
-                            <div class="col-sm-9">
-                                <p class="paragraph2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem
-                                    Ipsum has been
-                                    the
-                                    industry's standard dummy text ever since the 1500s,</p>
+                        <div class="row pt-3">
+                            <div class="col-sm-3">
+                                <h6>Category :</h6>
                             </div>
-
-                            <div class="row">
-                                <h4 style="margin-left: 30px;" class="category2"> category</h4>
-                            </div>
+                            <h6 class="category2"> category</h6>
                         </div>
-                        <div class="row justify-content-center">
+                        <div class="row pt-3">
+                            <div class="col-sm-3">
+                                <h6>description :</h6>
+                            </div>
+                            <div class="col-sm-9 ">
+                                <h6 class="paragraph2"></h6>
+                            </div>
 
-                            <div class="col-sm-6">
+
+                        </div>
+                        <div class="row justify-content-center pt-3">
+
+                            <div class="col-sm-6 ">
                                 <a href="" class="button go_button2 btn btn-outline-secondary">take me there</a>
 
                             </div>
@@ -127,26 +154,31 @@
             </div>
         </div>
         <div class="col-sm-10">
-            <div class="card">
+            <div class="card card_css">
                 <div class="card-body row">
-                    <img class="image3 col-sm-4" src="user.png" alt="sans" />
+                    <img class="image3 col-sm-4 image_s" src="user.png" alt="sans" />
                     <div class="col-sm-8">
                         <a class="title_href3" href="ad_details.html">
                             <h3 class="title3 row">page_1</h3>
                         </a>
-                        <div class="row">
+                        <div class="row pt-3">
+                            <div class="col-sm-3">
+                                <h6>caregory :</h6>
+                            </div>
+                            <h6 class="category3" > category</h6>
+                        </div>
+
+                        <div class="row pt-3">
+                            <div class="col-sm-3">
+                                <h6>discription :</h6>
+                            </div>
                             <div class="col-sm-9">
-                                <p class="paragraph3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been
-                                    the
-                                    industry's standard dummy text ever since the 1500s,</p>
+                                <p class="paragraph3">dicriptin</p>
                             </div>
 
-                            <div class="row">
-                                <h4 class="category3" style="margin-left: 30px;"> category</h4>
-                            </div>
+
                         </div>
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center pt-3">
 
                             <a href="" class="button go_button3 btn btn-outline-secondary">take me there</a>
 
@@ -170,15 +202,15 @@
 
 
 
-<div class="row" style="margin-top: 60px;">
+<div class="row" style="margin-top: 120px;">
     <div class="col-sm-1"></div>
     <div class="col-sm-10">
-        <div class="card text-center">
+        <div class="card text-center card_color">
             <div class="row">
                 <div class="col-sm-4"></div>
-                <img class="col-sm-4" id="profile_pic" src="/images/{{$shop->logo}}" width="200" height="350" style="margin-top: 30px;" />
+                <img class="col-sm-4 " id="profile_pic" src="/images/{{$shop->logo}}" width="200" height="350" style="margin-top: 30px;" />
                 <div class="card-img-overlay">
-                    <button type="button" id="prof_del_btn" class="btn btn-danger" onclick="delte_prof_photo({{Auth::guard('shop')->user()->id}});" style="margin-top: 320px; margin-left: 310px;display: none;"><i class="fas fa-trash-alt"></i></button>
+                    <button type="button" id="prof_del_btn" class="btn btn-danger red-btn" onclick="delte_prof_photo({{Auth::guard('shop')->user()->id}});" style="margin-top: 320px; margin-left: 310px;display: none;"><i class="fas fa-trash-alt"></i></button>
 
                 </div>
 
@@ -187,10 +219,10 @@
                         <div class="container" style="margin-top: 340px; margin-right: 50px">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <button type="button" id="edit_prof_poc" onclick="show_edit_pic_btn();" class="btn btn-success" ><i class="fas fa-images"></i></button>
+                                    <button type="button" id="edit_prof_poc" onclick="show_edit_pic_btn();" class="btn btn-success green-btn" ><i class="fas fa-images"></i></button>
                                 </div>
                                 <div class="col-sm-6">
-                                    <button type="button" id="cancel_btn" onclick="hide_edit_pic_btn();" class="btn btn-secondary ml-3" style="display: none;">cancel</button>
+                                    <button type="button" id="cancel_btn" onclick="hide_edit_pic_btn();" class="btn btn-secondary ml-3 " style="display: none;">cancel</button>
 
                                 </div>
 
@@ -203,14 +235,14 @@
                         <div class="col-sm-12 d-flex justify-content-center">
                             <form class="form-inline" method="post" action="/changePP={{Auth::guard('shop')->user()->id}}" enctype="multipart/form-data">
                              @csrf
-                                <div class="row form-group">
+                                <div class="row form-group pr-4">
                                     <div class="col-md-12">
-                                        <label class="text-black" for="image">Change logo</label>
+
                                         <input type="file" id="image" name="image" class="form-control">
                                     </div>
                                 </div>
 
-                                <button type="submit"  class="btn btn-primary mb-2">change picture</button>
+                                <button type="submit"  class="btn btn-primary ">change picture</button>
                             </form>
                         </div>
                     </div>
@@ -230,7 +262,7 @@
                                 <label for="drop1">change category  :</label>
 
                                 <select  id="f_url2" style="width: 150px;">
-                                    <option value="..." disabled selected value>...</option>
+                                    <option value="..." disabled selected >{{$shop->category->name}}</option>
                                     @foreach($categories as $category)
                                         <option value="{{$category->id}}">{{$category->name}}</option>
                                     @endforeach
@@ -241,14 +273,15 @@
                         <div class="col-sm-4">
                             <div class="row">
 
-                                <h4>adress : </h4>
-                                <a href="/ads={{$shop->category_id}}" id="category" style="margin-left: 10px;">{{$shop->category->name}}</a>
+                                <h4>Category : </h4>
+                                <a href="/ads={{$shop->category_id}}" id="category" style="margin-left: 10px;"><h5 class="align-text-bottom pt-1">{{$shop->category->name}}</h5></a>
+                                <p id="org" style="display: none">{{$shop->category->id}}</p>
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="row">
                                 <h4>Email : </h4>
-                                <p>{{$shop->email}}</p>
+                                <h5 class="pl-3 align-text-bottom">{{$shop->email}}</h5>
                             </div>
                         </div>
                     </div>
@@ -262,7 +295,7 @@
                                 <label for="drop1">Change address 1 :</label>
 
                                 <select id="f_url" style="width: 150px;">
-                                    <option disabled selected value="...">...</option>
+                                    <option disabled selected value="...">{{$shop->address}}</option>
                                     <option value="1">Irbid</option>
                                     <option value="2">Ajloun</option>
                                     <option value="3">Jerash</option>
@@ -281,7 +314,7 @@
                         <div class="col-sm-7">
                             <div class="row" style="margin-left: 3px;">
                                 <h4>Address:</h4>
-                                <h1 id="address" style="margin-left: 10px;">{{$shop->address}}</h1>
+                                <h5 id="address" class="mt-1"  style="margin-left: 10px;">{{$shop->address}}</h5>
                             </div>
                         </div>
 
@@ -317,18 +350,18 @@
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="container " id="ads_word" style="">
-                                <a href="#" onclick="show_ads()"  class="font-weight-light a_link">Ads</a>
+                                <a href="#" onclick="show_ads()"  class="font-weight-light a_link"><h4>Ads</h4></a>
                                 <p class="font-weight-bold">{{$post_number}}</p>
                             </div>
                         </div>
                         <div class="col-sm-4 ">
                             <div class="container " id="Favorites_word" style="display: block;">
-                                <a href="#" onclick="show_Favorites()" class="font-weight-light a_link">Favorites</a>
+                                <a href="#" onclick="show_Favorites()" class="font-weight-light a_link"><h4>Favorites</h4></a>
                                 <p class="font-weight-bold">{{$favorite_number}}</p>
                             </div>
                         </div>
                         <div class="col-sm-4">
-                            <a href="#" onclick="show_Follwing()"  class="font-weight-light a_link">Follwing</a>
+                            <a href="#" onclick="show_Follwing()"  class="font-weight-light a_link"><h4>Following</h4></a>
                             <p class="font-weight-bold">{{$follow_number}}</p>
                         </div>
                     </div>
@@ -336,7 +369,7 @@
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-1"></div>
                         <div class="col-sm-10">
-                            <button type="button" id="call_button" class="btn btn-success btn-lg btn-block">
+                            <button type="button" id="call_button" class="btn btn-success btn-lg btn-block green-btn">
                                 {{$shop->phone}}
                             </button>
                         </div>
@@ -500,6 +533,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 </script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
     var phone_number = document.getElementById("call_button").innerHTML;
     var input_field = document.getElementById("new_phone_number");
@@ -570,6 +604,8 @@
 
         var drop2_shap = document.getElementById("drop_url2");
 
+        var hidden_val = document.getElementById("org").innerHTML;
+
         paragraphH.contentEditable = "true";
 
         paragraphH.className = "col-sm-12 border border-dark";
@@ -604,6 +640,7 @@
         var title = document.getElementById("user_name");
         var address = document.getElementById("address");
         var category = document.getElementById("category");
+        var hidden_val1 = document.getElementById("org").innerHTML;
 
         save_new_phone_number(document.getElementById("call_button").innerHTML);
         var call_btn = document.getElementById("call_button");
@@ -618,7 +655,28 @@
         var select2 = document.getElementById("f_url2");
         var selec_val2 = select2.options[select2.selectedIndex].value;
 
-        console.log('paragraph 1='+paragraphH.innerHTML+"name="+title.innerHTML+'phone= '+call_btn.innerText+" address= "+address.innerText+' category= '+category.innerText);
+        console.log(' category= '+category.innerText);
+        if (selec_val == "...") {
+            address.innerHTML = address.innerHTML;
+            drop1_shap.style.display = "none";
+        } else {
+            address.innerHTML = selec_val;
+            drop1_shap.style.display = "none";
+        }
+
+
+        if (selec_val2 == "...") {
+            category.innerHTML = category.innerHTML;//PLUMING//2
+            drop2_shap.style.display = "none";
+            selec_val2= hidden_val1;
+            // console.log("goool"+hidden_val1)
+        } else {
+
+            category.innerHTML = select2.options[select2.selectedIndex].innerHTML;
+            category.href="/ads="+select2.options[select2.selectedIndex].value;
+            console.log('category.innerHTML= ',category.innerHTML)
+            drop2_shap.style.display = "none";
+        }
 
         axios.get("editMyProfile?shop_id="+shop_id+"&description="+paragraphH.innerText+"&name="+title.innerHTML+"&phone="+call_btn.innerHTML+"&address="+selec_val+"&category="+selec_val2)
             .then
@@ -634,24 +692,7 @@
                     title.style.backgroundColor = "";
 
 
-                    if (selec_val == "...") {
-                        address.innerHTML = address.innerHTML;
-                        drop1_shap.style.display = "none";
-                    } else {
-                        address.innerHTML = selec_val;
-                        drop1_shap.style.display = "none";
-                    }
 
-
-                    if (selec_val2 == "...") {
-                        category.innerHTML = category.innerHTML;
-                        drop2_shap.style.display = "none";
-                    } else {
-                        category.innerHTML = select2.options[select2.selectedIndex].innerHTML;
-                        category.href="/ads="+select2.options[select2.selectedIndex].value;
-                        console.log('category.innerHTML= ',category.innerHTML)
-                        drop2_shap.style.display = "none";
-                    }
 
 
 
@@ -903,7 +944,7 @@
 ?>
         cards_s2[i] = document.getElementById("card2");
 
-        cards_s2[i].getElementsByClassName("shop")[0].id = "shop_" + "<?php echo $favorite->posts->shops->name  ?>";
+        cards_s2[i].getElementsByClassName("shop")[0].id = "shop_" + "<?php echo $favorite->post->shop->name  ?>";
 
 
 
@@ -920,17 +961,17 @@
         /*   your work starts here* */
         cards_s2[i].getElementsByClassName("image2")[0].src="/images/"+"<?php echo App\Image::where('post_id',$favorite->post_id)->pluck('image')->first()?>";
 
-        cards_s2[i].getElementsByClassName("title_href2")[0].href="/single="+"<?php echo $favorite->posts->id  ?>";
+        cards_s2[i].getElementsByClassName("title_href2")[0].href="/single="+"<?php echo $favorite->post->id  ?>";
 
-        cards_s2[i].getElementsByClassName("title2")[0].innerHTML="<?php echo $favorite->posts->name  ?>";
+        cards_s2[i].getElementsByClassName("title2")[0].innerHTML="<?php echo $favorite->post->name  ?>";
 
-        cards_s2[i].getElementsByClassName("paragraph2")[0].innerHTML="<?php echo $favorite->posts->slogan  ?>";
+        cards_s2[i].getElementsByClassName("paragraph2")[0].innerHTML="<?php echo $favorite->post->slogan  ?>";
 
-        cards_s2[i].getElementsByClassName("category2")[0].innerHTML="<?php echo $favorite->posts->categories->name  ?>";
+        cards_s2[i].getElementsByClassName("category2")[0].innerHTML="<?php echo $favorite->post->category->name  ?>";
 
-        cards_s2[i].getElementsByClassName("go_button2")[0].href="/single="+"<?php echo $favorite->posts->id  ?>";
+        cards_s2[i].getElementsByClassName("go_button2")[0].href="/single="+"<?php echo $favorite->post->id  ?>";
 
-        cards_s2[i].getElementsByClassName("price2")[0].innerHTML="<?php echo $favorite->posts->price  ?>";
+        cards_s2[i].getElementsByClassName("price2")[0].innerHTML="<?php echo $favorite->post->price  ?>";
 
         /*
        work ends here
@@ -1081,7 +1122,7 @@
         /*   your work starts here* */
         cards_s3[i].getElementsByClassName("image3")[0].src="/images/"+"<?php echo App\Shop::where('id',$following->follow_id)->value('logo')?>";
 
-        cards_s3[i].getElementsByClassName("title_href3")[0].href="/profile="+"<?php echo App\Shop::where('id',$following->follow_id)->value("id") ?>";
+        cards_s3[i].getElementsByClassName("title_href3")[0].href="/shop="+"<?php echo App\Shop::where('id',$following->follow_id)->value("id") ?>";
 
         cards_s3[i].getElementsByClassName("title3")[0].innerHTML="<?php echo App\Shop::where('id',$following->follow_id)->value("name") ?>";
 
@@ -1089,7 +1130,7 @@
 
         cards_s3[i].getElementsByClassName("category3")[0].innerHTML="<?php echo App\Category::where('id',App\Shop::where('id',$following->follow_id)->value("category_id"))->value("name") ?>";
 
-        cards_s3[i].getElementsByClassName("go_button3")[0].href="/profile="+"<?php echo App\Shop::where('id',$following->follow_id)->value("id") ?>";
+        cards_s3[i].getElementsByClassName("go_button3")[0].href="/shop="+"<?php echo App\Shop::where('id',$following->follow_id)->value("id") ?>";
 
 
 
@@ -1233,12 +1274,12 @@
             document.getElementById("ads_card").style.display = "block";
             document.getElementById("following_card").style.display = "none";
             document.getElementById("favorate_card").style.display = "none";
-        } else if (x == '2') {
+        } else if (x == '3') {
                 document.getElementById("ads_card").style.display = "none";
                 document.getElementById("following_card").style.display = "block";
                 document.getElementById("favorate_card").style.display = "none";
 
-        } else if(x == '3'){
+        } else if(x == '2'){
             document.getElementById("ads_card").style.display = "none";
             document.getElementById("following_card").style.display = "none";
             document.getElementById("favorate_card").style.display = "block";

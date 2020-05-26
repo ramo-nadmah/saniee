@@ -1,5 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <style>
+        .green-btn{
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        .red-btn{
+            background-color: #E71D36;
+        }
+        .card_css{
+            max-height:250px;
+            overflow: hidden;
+        }
+
+        .image_s{
+            width: 200px;
+            height: 200px;
+        }
+        .image_s2{
+            width: 200px;
+            height: 170px;
+        }
+    </style>
+</head>
 
 @include('layouts.head')
 <body>
@@ -12,9 +36,9 @@
 
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
-            <div class="card">
+            <div class="card card_css">
                 <div class="card-body row">
-                    <img class="image2 col-sm-4" src="user.png" alt="sans" />
+                    <img class="image2 col-sm-4 image_s" src="user.png" alt="sans" />
                     <div class="col-sm-8">
                         <a class="title_href2" href="#">
                             <h3 class="title2 row">page_1</h3>
@@ -32,7 +56,7 @@
                                 <h4 style="margin-left: 30px;" class="category2"> category</h4>
                             </div>
                         </div>
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center pt-3">
 
                             <div class="col-sm-6">
                                 <a href="" class="button go_button2 btn btn-outline-secondary">take me there</a>
@@ -74,9 +98,9 @@
             </div>
         </div>
         <div class="col-sm-10">
-            <div class="card">
+            <div class="card card_css">
                 <div class="card-body row">
-                    <img class="image3 col-sm-4" src="user.png" alt="sans" />
+                    <img class="image3 col-sm-4 image_s" src="user.png" alt="sans" />
                     <div class="col-sm-8">
                         <a class="title_href3" href="ad_details.html">
                             <h3 class="title3 row">page_1</h3>
@@ -93,7 +117,7 @@
                                 <h4 class="category3" style="margin-left: 30px;"> category</h4>
                             </div>
                         </div>
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center pt-4">
 
                             <a href="" class="button go_button3 btn btn-outline-secondary">take me there</a>
 
@@ -125,7 +149,7 @@
                 <img class="col-sm-4" id="profile_pic" src="/images/{{Auth::guard('web')->user()->logo}}" width="200" height="350"
                      style="margin-top: 30px;" />
                 <div class="card-img-overlay">
-                    <button type="button" id="prof_del_btn" class="btn btn-danger" onclick="delte_prof_photo({{Auth::guard('web')->user()->id}});"
+                    <button type="button" id="prof_del_btn" class="btn btn-danger red-btn" onclick="delte_prof_photo({{Auth::guard('web')->user()->id}});"
                             style="margin-top: 320px; margin-left: 310px;display: none;"><i
                             class="fas fa-trash-alt"></i></button>
 
@@ -137,7 +161,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <button type="button" id="edit_prof_poc" onclick="show_edit_pic_btn();"
-                                            class="btn btn-success"><i class="fas fa-images"></i></button>
+                                            class="btn btn-success green-btn"><i class="fas fa-images"></i></button>
                                 </div>
                                 <div class="col-sm-6">
                                     <button type="button" id="cancel_btn" onclick="hide_edit_pic_btn();"
@@ -155,13 +179,12 @@
                         <div class="col-sm-12 d-flex justify-content-center">
                             <form class="form-inline" method="post" action="/changeUserPP={{Auth::guard('web')->user()->id}}" enctype="multipart/form-data">
                                 @csrf
-                                <div class="row form-group">
+                                <div class="row form-group pr-3">
                                     <div class="col-md-12">
-                                        <label class="text-black" for="image">Change logo</label>
                                         <input type="file" id="image" name="image" class="form-control">
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary mb-2">change picture</button>
+                                <button type="submit" class="btn btn-primary">change picture</button>
                             </form>
                         </div>
                     </div>
@@ -241,7 +264,7 @@
 
     <div class="container" id="favorate_card" style="display: none;">
         <div class="row">
-            <div class="col-sm-2"></div>
+            <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <div class="container" id="container2">
                     <div class="container" id="nothing2" style="display: none;">
@@ -253,7 +276,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-sm-1"></div>
                 </div>
             </div>
 
@@ -261,7 +284,7 @@
         <div class=" row">
             <div class="container">
                 <div class="row" style="margin-top: 50px;">
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-8">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center" id="pagintaion_bar2"
@@ -270,7 +293,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3"></div>
                 </div>
             </div>
         </div>
@@ -278,7 +301,7 @@
 
     <div class="container" id="following_card" style="display: none;">
         <div class="row">
-            <div class="col-sm-2"></div>
+            <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <div class="container" id="container3">
                     <div class="container" id="nothing3" style="display: none;">
@@ -294,12 +317,13 @@
 
                 </div>
             </div>
+            <div class="col-sm-1"></div>
 
         </div>
         <div class="row">
             <div class="container">
                 <div class="row" style="margin-top: 50px;">
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-1"></div>
                     <div class="col-sm-8">
                         <nav aria-label="Page navigation example">
                             <ul class="pagination justify-content-center" id="pagintaion_bar3"
@@ -308,7 +332,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-sm-2"></div>
+                    <div class="col-sm-3"></div>
                 </div>
             </div>
         </div>
@@ -331,6 +355,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 </script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
 
 
