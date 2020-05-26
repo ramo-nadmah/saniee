@@ -14,32 +14,35 @@
                 <div class="card-body row">
                     <img class="img col-sm-4" src="user.png" alt="sans" />
                     <div class="col-sm-8">
-                        <div class="row">
+                        <div class="row pl-1">
                             <a class="titlehref" href="ad_details.html">
                                 <h3 class="title row">page_1</h3>
                             </a>
                         </div>
-                        <div class="row">
 
 
+
+                            <div class="row py-2">
+
+
+                                <h5>Slogan :</h5>    <h5 class="slogan pl-2 " >Click here</h5>
+
+
+
+                            </div>
                             <div class="row">
 
-                                <div class="col-sm-6 ">
-                                 Slogan:   <p class="slogan" >Click here</p>
-                                </div>
-                                <div class="col-sm-6">
-                                Price:    <p class="price" >Click here</p>
-                                </div>
+                                   <h5>Price: </h5>    <h5 class="price pl-2" >Click here</h5>
 
                             </div>
-
-                        </div>
                         <div class="row">
-                            <div class="col-sm-12">
-                                <a href="#" class="url">see post</a>
+                            <div class="col-sm-12 pt-3">
+                                <a href="#" class="url"><h4>See post</h4></a>
                             </div>
-
                         </div>
+
+
+
 
                     </div>
                 </div>
@@ -53,11 +56,17 @@
         <div class="card text-center border-info mb-3" style="width: 25rem; margin-left: 20px;">
             <img class="rounded mx-auto d-block rounded-circle" src="/images/{{$shop->logo}}" height="300" width="300" />
             <div class="card-body">
-                <nav class="row">
+                <nav class="row pt-1">
                     <nav class="col-sm-2"></nav>
                     <nav class="col-sm-8 d-flex justify-content-between">
-                        <div class="row ">
-                            <h5 class="card-title" id="user_name" style="margin-left: 50px;">{{$shop->name}}</h5>
+                        <div class="row text-center">
+
+
+                                <h4 class="card-title pl-5" id="user_name" style="margin-left: 50px;">{{$shop->name}}</h4>
+
+
+
+
 
                         </div>
                     </nav>
@@ -65,24 +74,24 @@
                 <nav class="col-sm-2"></nav>
                 </nav>
 
-                <div class="row" style="margin-top: 4px;">
+                <div class="row py-2" style="margin-top: 4px;">
                     <div class="col-sm-6">
                         <div class="row" style="margin-left: 3px;">
                             <h6>Shop Category:</h6>
-                            <p style="margin-left: 10px;">{{$shop->category->name}}</p>
+                            <h6 style="margin-left: 10px;">{{$shop->category->name}}</h6>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="row">
+                        <div class="row pl-5">
                             <h6>Address:</h6>
-                            <p  style="margin-left: 10px;">{{$shop->address}}</p>
+                            <h6  style="margin-left: 10px;">{{$shop->address}}</h6>
                         </div>
                     </div>
                 </div>
 
 
 
-                <p class="card-text" id="paragraph" style="margin-top: 20px;">
+                <p class="card-text pb-2" id="paragraph" style="margin-top: 20px;">
                     {{$shop->description}}
                 </p>
 
@@ -177,6 +186,7 @@
 
 
 </div>
+
 
 
 
