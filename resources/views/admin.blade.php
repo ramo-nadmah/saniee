@@ -146,7 +146,7 @@
         }
         .pagination li i {
             font-size: 16px;
-            padding-top: 6px
+            padding-top: 6px;
         }
         .hint-text {
             float: left;
