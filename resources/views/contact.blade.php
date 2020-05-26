@@ -9,7 +9,7 @@
 
 
 
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(/static_images/Contact-us5.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row align-items-center justify-content-center text-center">
 
@@ -19,7 +19,7 @@
                     <div class="row justify-content-center mt-5">
                         <div class="col-md-8 text-center">
                             <h1>Contact Us</h1>
-                            <p class="mb-0">Get In Touch</p>
+                            <h2 style="color: #fff" class="mb-0">Get In Touch</h2>
                         </div>
                     </div>
 
