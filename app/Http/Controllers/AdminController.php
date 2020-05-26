@@ -76,12 +76,13 @@ class AdminController extends Controller
 
                 return redirect("/admin");
             } else {
-                $user=User::where('id', '=', $request->id)->get();
-                Follower::where('user_id',$request->id)->delete();
-                Favorite::whre('user_id',$request->id)->delete();
 
-//                $user->followings->delete();
-//                $user->favorites->delete();
+                $user=User::find($request->id);
+                Follower::where('user_id',$request->id)->delete();
+                Favorite::where('user_id',$request->id)->delete();
+//
+////                $user->followings->delete();
+////                $user->favorites->delete();
                 $user->delete();
             }
         }elseif($request->flag=='y')
