@@ -41,7 +41,7 @@
                     <div class="col-sm-8">
                         <div class="row">
 
-                                <h3 class="title row pl-3">page_1</h3>
+                            <a> <h3 class="title row pl-3">page_1</h3></a>
 
                         </div>
 
@@ -104,7 +104,7 @@
                         </div>
                         <div class="row pt-3">
                             <div class="col-sm-3">
-                                <h6>dicripton :</h6>
+                                <h6>description :</h6>
                             </div>
                             <div class="col-sm-9 ">
                                 <h6 class="paragraph2"></h6>
@@ -274,7 +274,7 @@
                             <div class="row">
 
                                 <h4>Category : </h4>
-                                <a href="/ads={{$shop->category_id}}" id="category" style="margin-left: 10px;"><h5 class="align-text-bottom">{{$shop->category->name}}</h5></a>
+                                <a href="/ads={{$shop->category_id}}" id="category" style="margin-left: 10px;"><h5 class="align-text-bottom pt-1">{{$shop->category->name}}</h5></a>
                                 <p id="org" style="display: none">{{$shop->category->id}}</p>
                             </div>
                         </div>
@@ -314,7 +314,7 @@
                         <div class="col-sm-7">
                             <div class="row" style="margin-left: 3px;">
                                 <h4>Address:</h4>
-                                <h5 id="address" style="margin-left: 10px;">{{$shop->address}}</h5>
+                                <h5 id="address" class="mt-1"  style="margin-left: 10px;">{{$shop->address}}</h5>
                             </div>
                         </div>
 
@@ -1122,7 +1122,7 @@
         /*   your work starts here* */
         cards_s3[i].getElementsByClassName("image3")[0].src="/images/"+"<?php echo App\Shop::where('id',$following->follow_id)->value('logo')?>";
 
-        cards_s3[i].getElementsByClassName("title_href3")[0].href="/profile="+"<?php echo App\Shop::where('id',$following->follow_id)->value("id") ?>";
+        cards_s3[i].getElementsByClassName("title_href3")[0].href="/shop="+"<?php echo App\Shop::where('id',$following->follow_id)->value("id") ?>";
 
         cards_s3[i].getElementsByClassName("title3")[0].innerHTML="<?php echo App\Shop::where('id',$following->follow_id)->value("name") ?>";
 
@@ -1130,7 +1130,7 @@
 
         cards_s3[i].getElementsByClassName("category3")[0].innerHTML="<?php echo App\Category::where('id',App\Shop::where('id',$following->follow_id)->value("category_id"))->value("name") ?>";
 
-        cards_s3[i].getElementsByClassName("go_button3")[0].href="/profile="+"<?php echo App\Shop::where('id',$following->follow_id)->value("id") ?>";
+        cards_s3[i].getElementsByClassName("go_button3")[0].href="/shop="+"<?php echo App\Shop::where('id',$following->follow_id)->value("id") ?>";
 
 
 
@@ -1274,12 +1274,12 @@
             document.getElementById("ads_card").style.display = "block";
             document.getElementById("following_card").style.display = "none";
             document.getElementById("favorate_card").style.display = "none";
-        } else if (x == '2') {
+        } else if (x == '3') {
                 document.getElementById("ads_card").style.display = "none";
                 document.getElementById("following_card").style.display = "block";
                 document.getElementById("favorate_card").style.display = "none";
 
-        } else if(x == '3'){
+        } else if(x == '2'){
             document.getElementById("ads_card").style.display = "none";
             document.getElementById("following_card").style.display = "none";
             document.getElementById("favorate_card").style.display = "block";
