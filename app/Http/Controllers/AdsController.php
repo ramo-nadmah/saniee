@@ -72,7 +72,7 @@ class AdsController extends Controller
             {
                 $pic=new Image();
 
-                $name = md5(time() . rand(0, 10000)) . '.' . $image_arr[$i]->getClientOriginalExtension();
+                $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image_arr[$i]->getClientOriginalExtension();
                 $destinationPath = public_path('/images');
                 $image_arr[$i]->move($destinationPath, $name);
                 $pic->image = $name;
