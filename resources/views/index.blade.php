@@ -87,7 +87,7 @@
 
                                 <div class="card">
                                     <a href="/single={{$post->id}}">
-                                        <img class="card-img-top rounded card_image" src="/images/{{App\Image::where('post_id',$post->id)->pluck('image')->first()}}">
+                                        <img class="card-img-top rounded card_image" src="{{App\Image::where('post_id',$post->id)->pluck('image')->first()}}">
                                         <div class="card-body  text-center">
                                             <div class="row">
                                                 <div class="col-lg-1"></div>
@@ -157,7 +157,7 @@
 
                                     <div class="card ">
                                         <a href="/single={{$post->id}}">
-                                            <img class="card-img-top rounded card_image" src="/images/{{App\Image::where('post_id',$post->id)->pluck('image')->first()}}">
+                                            <img class="card-img-top rounded card_image" src="{{App\Image::where('post_id',$post->id)->pluck('image')->first()}}">
                                             <div class="card-body  text-center">
                                                 <div class="row">
                                                     <div class="col-lg-1"></div>
@@ -211,7 +211,7 @@
                 <div class="col-lg-3">
                     <a href="/ads={{$category->id}}">
                         <div class="card card_it">
-                            <img class="card-img-top card_image rounded" src="/images/{{$category->logo}}">
+                            <img class="card-img-top card_image rounded" src="{{$category->logo}}">
                             <div class="card-body  text-center">
                                 <h5 class="card-title font-weight-normal font-italic text-center black-text" style="">{{$category->name}} shops</h5>
                             </div>
