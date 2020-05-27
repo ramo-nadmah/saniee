@@ -324,9 +324,9 @@
                         <h2>Manage <b>Users</b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <a onclick="deleter(-1,'x')" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete Users Database</span></a>
+                        <a onclick="deleter(-1,'x')" class="btn btn-danger" data-toggle="modal"><i style="color:white" class="fas fa-trash-alt " ></i> <span>Delete Users Database</span></a>
 
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#usermodal" ><i class="material-icons">&#xE147;</i> <span>Add New User</span></button>{{--id of whats affected by the button /toogle:what we are doing with the button --}}
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#usermodal" ><i class="fas fa-plus"></i> <span>Add New User</span></button>{{--id of whats affected by the button /toogle:what we are doing with the button --}}
                     </div>
 
                 </div>
@@ -356,7 +356,7 @@
                         <td>{{$user->updated_at}}</td>
 
                         <td>
-                            <a href="#usermodal" id="{{$user->id}}x"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#usermodal" id="{{$user->id}}x"  class="edit" data-toggle="modal"><i class="fas fa-edit"></i></a>
                             <a   onclick="deleter('{{$user->id}}','x')" ><i style="color:red" class="fas fa-trash-alt "></i> </a>
                         </td>
                     </tr>
@@ -380,9 +380,9 @@
                         <h2>Manage <b>Categories</b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <a onclick="deleter(-1)" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete Categories Database</span></a>
+                        <a onclick="deleter(-1)" class="btn btn-danger" data-toggle="modal"><i style="color:white" class="fas fa-trash-alt "></i> <span>Delete Categories Database</span></a>
 
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#categorymodal" ><i class="material-icons">&#xE147;</i> <span>Add New Category</span></button>{{--id of whats affected by the button /toogle:what we are doing with the button --}}
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#categorymodal" ><i class="fas fa-plus"></i> <span>Add New Category</span></button>{{--id of whats affected by the button /toogle:what we are doing with the button --}}
                     </div>
 
                 </div>
@@ -410,7 +410,7 @@
                         <td>{{$category->updated_at}}</td>
 
                         <td>
-                            <a href="#categorymodal" id="{{$category->id}}y"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#categorymodal" id="{{$category->id}}y"  class="edit" data-toggle="modal"><i class="fas fa-edit"></i></a>
                             <a   onclick="deleter('{{$category->id}}','y')" ><i style="color:red" class="fas fa-trash-alt "></i> </a>
                         </td>
                     </tr>
@@ -434,9 +434,9 @@
                         <h2>Manage <b>Shops</b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <a onclick="deleter(-1,'y')" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete Shops Database</span></a>
+                        <a onclick="deleter(-1,'y')" class="btn btn-danger" data-toggle="modal"><i style="color:white" class="fas fa-trash-alt "></i> <span>Delete Shops Database</span></a>
 
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#shopmodal" ><i class="material-icons">&#xE147;</i> <span>Add New Shop</span></button>{{--id of whats affected by the button /toogle:what we are doing with the button --}}
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#shopmodal" ><i class="fas fa-plus"></i> <span>Add New Shop</span></button>{{--id of whats affected by the button /toogle:what we are doing with the button --}}
                     </div>
 
                 </div>
@@ -466,7 +466,7 @@
                         <td>{{$shop->updated_at}}</td>
 
                         <td>
-                            <a href="#shopmodal" id="{{$shop->id}}z"  class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                            <a href="#shopmodal" id="{{$shop->id}}z"  class="edit" data-toggle="modal"><i class="fas fa-edit"></i></a>
                             <a   onclick="deleter('{{$shop->id}}','z')" ><i style="color:red" class="fas fa-trash-alt "></i> </a>
                         </td>
                     </tr>
