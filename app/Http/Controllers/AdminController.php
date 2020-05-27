@@ -25,6 +25,18 @@ class AdminController extends Controller
     }
     public function register(Request $request)
     {
+        $validateData=$request->validate
+        (
+            [
+                'email'=>'required|unique:admins',
+                'password'=>'required',
+                'name'=>'required|max:15'
+
+
+
+            ]
+        );
+
         $admin = new Admin();
         $admin->email = $request->email;
         $admin->name = $request->name;
@@ -38,7 +50,16 @@ class AdminController extends Controller
     }
     public function login(Request $request)
     {
+        $validateData=$request->validate
+        (
+            [
+                'email'=>'required|exists:admins',
+                'password'=>'required',
 
+
+
+            ]
+        );
 
         $credentials = $request->only('email', 'password');
 
@@ -179,7 +200,7 @@ class AdminController extends Controller
                 $category = new Category();
                 if (Category::where('name', '=', $request->name)->exists()) {
                     $image = $request->file('image');
-                    $name = md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
+                    $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
                     $destinationPath = public_path('/images');
                     $image->move($destinationPath, $name);
 
@@ -192,7 +213,7 @@ class AdminController extends Controller
                 } else {
                     $category->name = $request->name;
                     $image = $request->file('image');
-                    $name = md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
+                    $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
                     $destinationPath = public_path('/images');
                     $image->move($destinationPath, $name);
                     $category->logo = $name;
