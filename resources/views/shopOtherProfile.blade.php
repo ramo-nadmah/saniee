@@ -54,7 +54,7 @@
 <div class="row">
     <div class="col-sm-5">
         <div class="card text-center border-info mb-3" style="width: 25rem; margin-left: 20px;">
-            <img class="rounded mx-auto d-block rounded-circle" src="/images/{{$shop->logo}}" height="300" width="300" />
+            <img class="rounded mx-auto d-block rounded-circle" src="{{$shop->logo}}" height="300" width="300" />
             <div class="card-body">
                 <nav class="row pt-1">
                     <nav class="col-sm-2"></nav>
@@ -289,7 +289,7 @@
         cards_s[i].getElementsByClassName("titlehref")[0].href ="/single=<?php echo $post->id ?>";
         cards_s[i].getElementsByClassName("slogan")[0].innerHTML ="<?php echo $post->slogan ?>";
         cards_s[i].getElementsByClassName("price")[0].innerHTML ="<?php echo $post->price ?>";
-        cards_s[i].getElementsByClassName("img")[0].src="/images/<?php echo App\Image::where('post_id',$post->id)->pluck('image')->first()?>";
+        cards_s[i].getElementsByClassName("img")[0].src="<?php echo App\Image::where('post_id',$post->id)->pluck('image')->first()?>";
 
     // /* get the image src/
         cards_s[i].getElementsByClassName("url")[0].href = "/single=<?php echo $post->id ?>";
@@ -377,6 +377,11 @@
 
         if (page != data.pages) {
             container.innerHTML += `<button id=${data.pages} onclick="chose_page(this.id);" class="btn btn-sm btn-info m-1">Last &#187;</button>`;
+        }
+        var l =<?php echo $post_number ?>;
+        console.log('L =',l);
+        if(l==0){
+            container.style.display = "none";
         }
 
 
