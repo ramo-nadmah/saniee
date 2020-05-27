@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateShopsTable extends Migration
 {
@@ -20,10 +21,10 @@ class CreateShopsTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('logo')->nullable();
             $table->string('description')->nullable();
-            $table->integer('category_id');
+            $table->integer('category_id')->nullable();
             $table->string('password');
-            $table->string('phone');
-            $table->string('address');
+            $table->string('phone')->nullable();
+            $table->string('address')->nullable();
 
             $table->rememberToken();
 //            laravel handles this auto
