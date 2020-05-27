@@ -54,6 +54,9 @@
                                 <label class="text-black" for="shop_name">Name of the shop</label>
                                 <input type="text" id="shop_name" name="shop_name" class="form-control">
                             </div>
+                            @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
 
