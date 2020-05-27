@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+@include('layouts.head')
 <head>
     <title>ClassyAds &mdash; Colorlib Website Template</title>
     <meta charset="utf-8">
