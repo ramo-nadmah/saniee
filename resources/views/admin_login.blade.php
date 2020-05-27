@@ -9,7 +9,10 @@
 
         <div class="col-md-12">
             <label class="text-black" for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control">
+            <input type="email" name="email" id="email" class="form-control @error('email') is-invalid @enderror">
+            @error('email')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
     </div>
 
@@ -17,8 +20,10 @@
 
         <div class="col-md-12">
             <label class="text-black" for="subject">Password</label>
-            <input type="password" name="password" id="subject" class="form-control">
-        </div>
+            <input type="password" name="password" id="subject" class="form-control @error('password') is-invalid @enderror">
+            @error('password')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror</div>
     </div>
 
 

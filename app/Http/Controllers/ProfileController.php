@@ -76,7 +76,7 @@ class ProfileController extends Controller
     {
         if($request->hasFile('image')) {
         $image = $request->file('image');
-        $name = md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
+        $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
         $destinationPath = public_path('/images');
         $image->move($destinationPath, $name);
         Shop::where('id',$id)->update(['logo'=>$name]);
@@ -92,7 +92,7 @@ class ProfileController extends Controller
     }
     public function deletePPhoto(Request $request)
     {
-        Shop::where('id',$request->shop_id)->update(['logo'=>"download.jpg"]);
+        Shop::where('id',$request->shop_id)->update(['logo'=>"/static_images/download.jpg"]);
     }
 
 ////////////////////////////////////////////////////////////////////////////////////////////
@@ -113,7 +113,7 @@ class ProfileController extends Controller
     }
     public function deleteUserPPhoto(Request $request)
     {
-        User::where('id',$request->user_id)->update(['logo'=>"download.jpg"]);
+        User::where('id',$request->user_id)->update(['logo'=>"/static_images/download.jpg"]);
     }
 
     public function userEdit(Request $request)
@@ -133,7 +133,7 @@ class ProfileController extends Controller
     {
         if($request->hasFile('image')) {
             $image = $request->file('image');
-            $name = md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
+            $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
             $destinationPath = public_path('/images');
             $image->move($destinationPath, $name);
             User::where('id',$id)->update(['logo'=>$name]);

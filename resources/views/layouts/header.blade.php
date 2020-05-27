@@ -40,7 +40,7 @@
                                          </div>
 
                                         <div class="col-sm-6">
-                                            <img height="30" width="30" src="/images/{{App\User::where('id',Auth::guard('web')->user()->id)->pluck('logo')->first()}}" class="rounded-circle float-right">
+                                            <img height="30" width="30" src="{{App\User::where('id',Auth::guard('web')->user()->id)->pluck('logo')->first()}}" class="rounded-circle float-right">
                                         </div>
                                     </div>
                                 </a>
@@ -102,7 +102,7 @@
                                     </div>
 
                                     <div class="col-sm-6">
-                                        <img height="30" width="30" src="/images/{{App\Shop::where('id',Auth::guard('shop')->user()->id)->pluck('logo')->first()}}" class="rounded-circle float-right">
+                                        <img height="30" width="30" src="{{App\Shop::where('id',Auth::guard('shop')->user()->id)->pluck('logo')->first()}}" class="rounded-circle float-right">
                                     </div>
                                 </div>
                             </a>

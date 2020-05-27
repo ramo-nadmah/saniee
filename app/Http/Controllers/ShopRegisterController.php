@@ -27,14 +27,27 @@ class ShopRegisterController extends Controller
 
     public function registration(Request $request)
     {
+        $validateData=$request->validate
+        (
+            [
+                'email'=>'required|unique:shops',
+                'password'=>'required|min:8',
+                'phone'=>'digits_between:9,10',
+                'name'=>'required|max:35'
 
+
+
+            ]
+        );
 //        $this->validate($request, [
 //            'password' => 'required|min:6'
 //        ]);
+//        dd($request);
         if($request->hasFile('image')) {
         $shop = new Shop();
+
         $shop->email = $request->email;
-        $shop->name = $request->shop_name;
+        $shop->name = $request->name;
         $shop->category_id=$request->category;
         $shop->description=$request->description;
         $shop->address=$request->address;
@@ -42,7 +55,7 @@ class ShopRegisterController extends Controller
 
 
         $image = $request->file('image');
-        $name = md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
+        $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
         $destinationPath = public_path('/images');
         $image->move($destinationPath, $name);
         $shop->logo = $name;

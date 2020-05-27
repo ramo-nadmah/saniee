@@ -19,25 +19,37 @@ class RegisterController extends Controller
     }
     public function registration(Request $request)
     {
-        $this->validate($request, [
-            'password' => 'required|min:6'
-//            confirmed|
-        ]);
-        if($request->hasFile('image')) {
+        $validateData=$request->validate
+        (
+            [
+                'email'=>'required|unique:users',
+                'password'=>'required|min:8',
+                'name'=>'required|max:20'
+
+
+            ]
+        );
         $user=new User();
         $user->name=$request->name;
         $user->email=$request->email;
         $user->password= Hash::make($request->password);
-        $image = $request->file('image');
-        $name = md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images');
-        $image->move($destinationPath, $name);
-        $user->logo = $name;
+            if($request->hasFile('image'))
+            {
+                $image = $request->file('image');
+                $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
+                $destinationPath = public_path('/images');
+                $image->move($destinationPath, $name);
+                $user->logo = $name;
+            }
+            else
+            {
+                $user->logo="/static_images/download.jpg";
+            }
+
         $user->save();
 
-        return redirect('/login'); }
-        else
-            return redirect()->back()->with('error', 'Please Select Images');
+        return redirect('/login');
+
     }
 
 }
