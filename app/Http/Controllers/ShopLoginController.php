@@ -17,6 +17,17 @@ class ShopLoginController extends Controller
 
     public function login(Request $request)
     {
+
+        $validateData=$request->validate
+        (
+            [
+                'email'=>'required|exists:shops',
+                'password'=>'required|min:8',
+
+
+
+            ]
+        );
 //       $this->validate($request, [
 //          'email'=>requied|email',
 //
