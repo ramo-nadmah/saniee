@@ -238,7 +238,7 @@
 
             cards_s[i].getElementsByClassName("description")[0].innerHTML ="<?php echo $shop->description ?>";
             cards_s[i].getElementsByClassName("id")[0].innerHTML ="<?php echo $shop->id ?>";
-            cards_s[i].getElementsByClassName("img")[0].src="images/<?php echo $shop->logo ?>";
+            cards_s[i].getElementsByClassName("img")[0].src="<?php echo $shop->logo ?>";
 
             // /* get the image src/
 <?php
