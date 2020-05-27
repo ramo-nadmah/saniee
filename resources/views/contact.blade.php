@@ -121,21 +121,21 @@
             <div class="row justify-content-center">
                 <div class="col-8">
                     <div class="border p-3 rounded mb-2">
-                        <a data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1" class="accordion-item h5 d-block mb-0">how to login?</a>
+                        <a data-toggle="collapse" href="#collapse-1" role="button" aria-expanded="false" aria-controls="collapse-1" class="accordion-item h5 d-block mb-0">how to register?</a>
 
                         <div class="collapse" id="collapse-1">
                             <div class="pt-2">
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.</p>
+                                <p class="mb-0">first you should know if you want to regist as a shop or as buyer ,second you must go to your registration page , fill your information correctly and press the join button  </p>
                             </div>
                         </div>
                     </div>
 
                     <div class="border p-3 rounded mb-2">
-                        <a data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4" class="accordion-item h5 d-block mb-0">Is this available in my country?</a>
+                        <a data-toggle="collapse" href="#collapse-4" role="button" aria-expanded="false" aria-controls="collapse-4" class="accordion-item h5 d-block mb-0">In which contry sanayi is available?</a>
 
                         <div class="collapse" id="collapse-4">
                             <div class="pt-2">
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.</p>
+                                <p class="mb-0">for now in Jordan .</p>
                             </div>
                         </div>
                     </div>
@@ -145,20 +145,12 @@
 
                         <div class="collapse" id="collapse-2">
                             <div class="pt-2">
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.</p>
+                                <p class="mb-0">it's free, and will always be free.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="border p-3 rounded mb-2">
-                        <a data-toggle="collapse" href="#collapse-3" role="button" aria-expanded="false" aria-controls="collapse-3" class="accordion-item h5 d-block mb-0">How the system works?</a>
-
-                        <div class="collapse" id="collapse-3">
-                            <div class="pt-2">
-                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti esse voluptates deleniti, ratione, suscipit quam cumque beatae, enim mollitia voluptatum velit excepturi possimus odio dolore molestiae officiis aspernatur provident praesentium.</p>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
 
             </div>
