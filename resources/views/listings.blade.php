@@ -153,7 +153,7 @@
                                 </div>
                             <div class="row pt-3">
                                 <div class="col-sm-12">
-                                    <a id="url_2" class="url_1" href="#"><h3 class="take-me" >Take me thier</h3></a>
+                                    <a id="url_2" class="url_1" href="#"><h3 class="take-me" >Take me their</h3></a>
                                 </div>
 
                             </div>
@@ -249,6 +249,13 @@
 ?>
                         cards_s[i].getElementsByClassName("url_1")[0].href = "/myShop=<?php echo $shop->id ?>_0";
                         cards_s[i].getElementsByClassName("titlehref")[0].href ="/myShop=<?php echo $shop->id ?>_0";
+<?php
+                    }
+                else
+                    {
+?>
+                        cards_s[i].getElementsByClassName("titlehref")[0].href ="/shop=<?php echo $shop->id ?>";
+                        cards_s[i].getElementsByClassName("url_1")[0].href ="/shop=<?php echo $shop->id ?>";
 <?php
                     }
             }
