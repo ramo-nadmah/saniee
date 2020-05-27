@@ -42,11 +42,12 @@ class ShopRegisterController extends Controller
 //        $this->validate($request, [
 //            'password' => 'required|min:6'
 //        ]);
+//        dd($request);
         if($request->hasFile('image')) {
         $shop = new Shop();
 
         $shop->email = $request->email;
-        $shop->name = $request->shop_name;
+        $shop->name = $request->name;
         $shop->category_id=$request->category;
         $shop->description=$request->description;
         $shop->address=$request->address;
