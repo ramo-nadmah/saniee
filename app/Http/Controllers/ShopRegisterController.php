@@ -32,7 +32,9 @@ class ShopRegisterController extends Controller
             [
                 'email'=>'required|unique:shops',
                 'password'=>'required|min:8',
-                'phone'=>'digits_between:9,10'
+                'phone'=>'digits_between:9,10',
+                'name'=>'required|max:35'
+
 
 
             ]
@@ -52,7 +54,7 @@ class ShopRegisterController extends Controller
 
 
         $image = $request->file('image');
-        $name = md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
+        $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
         $destinationPath = public_path('/images');
         $image->move($destinationPath, $name);
         $shop->logo = $name;
