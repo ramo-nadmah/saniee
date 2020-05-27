@@ -87,7 +87,7 @@ class AdminController extends Controller
     public function deleter(Request $request)
     {
         if($request->flag=='x') {
-            if ($request->id == -1) {
+            if ($request->id == '-1') {
 //                $user=User::all();
                 Favorite::where('user_id',$request->id)->delete();
                 Follower::where('user_id',$request->id)->delete();
@@ -108,14 +108,14 @@ class AdminController extends Controller
             }
         }elseif($request->flag=='y')
         {
-            if ($request->id == -1) {
+            if ($request->id == '-1') {
                 category::truncate();
                 Shop::truncate();
                 Follower::truncate();
                 Post::tuncate();
                 Favorite::truncate();
                 Image::truncate();
-                return redirect("/admin");
+                return response('/admin');
             } else {
 
                 $category=Category::find($request->id);
@@ -139,7 +139,7 @@ class AdminController extends Controller
         }
         else if($request->flag=='z')
         {
-            if ($request->id == -1) {
+            if ($request->id == '-1') {
                 Shop::truncate();
                 Follower::truncate();
                 Favorite::trucate();
@@ -179,11 +179,26 @@ class AdminController extends Controller
 //        $user->save();
         if($flag=='x')
         {
+            $validateUserData=$request->validate
+            (
+                [
+                    'email'=>'required',
+                    'password'=>'required|min:8',
+                    'name'=>'required|max:20',
+                    'logo'=>"/static_images/download.jpg"
+
+
+                ]
+            );
             $user = new User();
-            if (User::where('email', '=', $request->email)->exists()) {
-                $user->update(
-                    ['password' => Hash::make($request->password), 'name' => $request->name, 'email' => $request->email,
-                        'updated_at' => date('Y-m-d H:i:s')]
+            if (User::where('email', '=', $request->email)->exists())
+            {
+                User::where('email', '=', $request->email)->update
+                (
+                    ['password' => Hash::make($request->password),
+                        'name' => $request->name, 'email' => $request->email,
+                        'updated_at' => date('Y-m-d H:i:s')
+                    ]
                 );
             } else {
                 $user->name=$request->name;
@@ -194,7 +209,8 @@ class AdminController extends Controller
 
 
             return redirect("/admin");
-        } elseif($flag=='y')
+        }
+        elseif($flag=='y')
         {
             if($request->hasFile('image')) {
                 $category = new Category();
@@ -204,9 +220,10 @@ class AdminController extends Controller
                     $destinationPath = public_path('/images');
                     $image->move($destinationPath, $name);
 
-                    $category->update(
+                    Category::where('name', '=', $request->name)->update(
                         [
-                            'name' => $request->name, 'updated_at' => date('Y-m-d H:i:s'),
+                            'name' => $request->name,
+                            'updated_at' => date('Y-m-d H:i:s'),
                             'logo' => $name
                         ]
                     );
@@ -228,17 +245,38 @@ class AdminController extends Controller
             }
         } elseif($flag=='z')
         {
+            $validateShopData=$request->validate
+            (
+                [
+                    'shopEmail'=>'required',
+                    'shopPassword'=>'required|min:8',
+                    'shopName'=>'required|max:35'
+
+                ]
+            );
             $shop = new Shop();
-            if (Shop::where('email', '=', $request->email)->exists()) {
-                $shop->update(
-                    ['password' => Hash::make($request->password), 'name' => $request->name, 'email' => $request->email,
-                        'updated_at' => date('Y-m-d H:i:s')]
+            $category=new Category();
+
+            if (Shop::where('email',  $request->shopEmail)->exists()) {
+                Shop::where('email',  $request->shopEmail)->update(
+                    [
+                        'password' => Hash::make($request->shopPassword),
+                        'name' => $request->shopName,
+                        'email' => $request->shopEmail,
+                        'updated_at' => date('Y-m-d H:i:s'),
+                        'category_id'=>$category->first()->value('id'),
+                        'logo'=>"/static_images/download.jpg"
+                    ]
                 );
+
             } else {
-                $shop->name=$request->name;
-                $shop->email=$request->email;
-                $shop->password= Hash::make($request->password);
+                $shop->name=$request->shopName;
+                $shop->email=$request->shopEmail;
+                $shop->password= Hash::make($request->shopPassword);
+                $shop->category_id=$category->first()->value('id');
+                $shop->logo="/static_images/download.jpg";
                 $shop->save();
+
             }
 
 
