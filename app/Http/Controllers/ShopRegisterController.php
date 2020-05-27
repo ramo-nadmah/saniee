@@ -27,12 +27,22 @@ class ShopRegisterController extends Controller
 
     public function registration(Request $request)
     {
+        $validateData=$request->validate
+        (
+            [
+                'email'=>'required|unique:shops',
+                'password'=>'required|min:8',
+                'phone'=>'digits_between:9,10'
 
+
+            ]
+        );
 //        $this->validate($request, [
 //            'password' => 'required|min:6'
 //        ]);
         if($request->hasFile('image')) {
         $shop = new Shop();
+
         $shop->email = $request->email;
         $shop->name = $request->shop_name;
         $shop->category_id=$request->category;
