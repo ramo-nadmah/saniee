@@ -52,7 +52,7 @@
                             <h4><a href="/shop={{$post->shop->id}}"> {{$post->shop->name}}</a></h4>
 
                         </div>
-                        <img class="col-sm-4" src="/images/{{$post->shop->logo}}">
+                        <img class="col-sm-4" src="{{$post->shop->logo}}">
                     </div>
                     <div class="row" style="margin-top: 50px;">
                         <button type="button" class="btn btn-success btn-lg btn-block">{{$post->phone}}</button>
@@ -192,7 +192,7 @@
 
                             <div class="carousel-item {{$actives}}">
                                 <!--  first image -->
-                                <img class="d-block w-100" src="/images/{{$image->image}}" height="550" alt="{{$i}}th slide">
+                                <img class="d-block w-100" src="{{$image->image}}" height="550" alt="{{$i}}th slide">
                             </div>
                         <?php
                             $i++;}
