@@ -19,8 +19,6 @@
                             <h1>Add Ads</h1>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
