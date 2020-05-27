@@ -146,7 +146,7 @@
         <div class="card text-center">
             <div class="row">
                 <div class="col-sm-4"></div>
-                <img class="col-sm-4" id="profile_pic" src="/images/{{Auth::guard('web')->user()->logo}}" width="200" height="350"
+                <img class="col-sm-4" id="profile_pic" src="{{Auth::guard('web')->user()->logo}}" width="200" height="350"
                      style="margin-top: 30px;" />
                 <div class="card-img-overlay">
                     <button type="button" id="prof_del_btn" class="btn btn-danger red-btn" onclick="delte_prof_photo({{Auth::guard('web')->user()->id}});"
@@ -513,7 +513,7 @@
 
 
     /*   your work starts here* */
-    cards_s2[i].getElementsByClassName("image2")[0].src="/images/"+"<?php echo App\Image::where('post_id',$favorite->posts_id)->pluck('image')->first()?>";
+    cards_s2[i].getElementsByClassName("image2")[0].src="<?php echo App\Image::where('post_id',$favorite->posts_id)->pluck('image')->first()?>";
 
     cards_s2[i].getElementsByClassName("title_href2")[0].href="/single="+"<?php echo $favorite->post->id  ?>";
 
@@ -673,7 +673,7 @@
     /* card id  */
     cards_s3[i].getElementsByClassName("Follow_btn")[0].id = "<?php echo $following->id?>";
     /*   your work starts here* */
-    cards_s3[i].getElementsByClassName("image3")[0].src="/images/"+"<?php echo App\Shop::where('id',$following->follow_id)->value('logo')?>";
+    cards_s3[i].getElementsByClassName("image3")[0].src="<?php echo App\Shop::where('id',$following->follow_id)->value('logo')?>";
 
     cards_s3[i].getElementsByClassName("title_href3")[0].href="/shop="+"<?php echo App\Shop::where('id',$following->follow_id)->value("id") ?>";
 
