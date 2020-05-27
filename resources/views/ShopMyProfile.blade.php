@@ -208,7 +208,7 @@
         <div class="card text-center card_color">
             <div class="row">
                 <div class="col-sm-4"></div>
-                <img class="col-sm-4 " id="profile_pic" src="/images/{{$shop->logo}}" width="200" height="350" style="margin-top: 30px;" />
+                <img class="col-sm-4 " id="profile_pic" src="{{$shop->logo}}" width="200" height="350" style="margin-top: 30px;" />
                 <div class="card-img-overlay">
                     <button type="button" id="prof_del_btn" class="btn btn-danger red-btn" onclick="delte_prof_photo({{Auth::guard('shop')->user()->id}});" style="margin-top: 320px; margin-left: 310px;display: none;"><i class="fas fa-trash-alt"></i></button>
 
@@ -791,7 +791,7 @@
         cards_s[i].getElementsByClassName("title")[0].innerHTML ="<?php echo $post->name ?>";
         cards_s[i].getElementsByClassName("slogan")[0].innerHTML ="<?php echo $post->slogan ?>";
         cards_s[i].getElementsByClassName("price")[0].innerHTML ="<?php echo $post->price ?>";
-        cards_s[i].getElementsByClassName("img")[0].src="/images/<?php echo App\Image::where('post_id',$post->id)->pluck('image')->first() ?>";
+        cards_s[i].getElementsByClassName("img")[0].src="<?php echo App\Image::where('post_id',$post->id)->pluck('image')->first() ?>";
         // /* get the image src/
         cards_s[i].getElementsByClassName("url")[0].href = "/single=<?php echo $post->id ?>";
 
@@ -959,7 +959,7 @@
 
 
         /*   your work starts here* */
-        cards_s2[i].getElementsByClassName("image2")[0].src="/images/"+"<?php echo App\Image::where('post_id',$favorite->post_id)->pluck('image')->first()?>";
+        cards_s2[i].getElementsByClassName("image2")[0].src="<?php echo App\Image::where('post_id',$favorite->post_id)->pluck('image')->first()?>";
 
         cards_s2[i].getElementsByClassName("title_href2")[0].href="/single="+"<?php echo $favorite->post->id  ?>";
 
@@ -1120,7 +1120,7 @@
         /* card id  */
         cards_s3[i].getElementsByClassName("Follow_btn")[0].id = "<?php echo $following->id?>";
         /*   your work starts here* */
-        cards_s3[i].getElementsByClassName("image3")[0].src="/images/"+"<?php echo App\Shop::where('id',$following->follow_id)->value('logo')?>";
+        cards_s3[i].getElementsByClassName("image3")[0].src="<?php echo App\Shop::where('id',$following->follow_id)->value('logo')?>";
 
         cards_s3[i].getElementsByClassName("title_href3")[0].href="/shop="+"<?php echo App\Shop::where('id',$following->follow_id)->value("id") ?>";
 
