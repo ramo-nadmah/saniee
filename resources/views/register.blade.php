@@ -41,29 +41,38 @@
 
                             <div class="col-md-12">
                                 <label class="text-black" for="name">Name</label>
-                                <input type="text" id="name" name="name" class="form-control">
+                                <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror">
                             </div>
+                            @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="row form-group">
 
                             <div class="col-md-12">
                                 <label class="text-black" for="email">Email</label>
-                                <input type="email" id="email" name="email" class="form-control">
+                                <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror">
+                                @error('email')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <label class="text-black" for="subject">Password</label>
-                                <input type="password" id="subject" name="password" class="form-control">
+                                <input type="password" id="subject" name="password" class="form-control @error('password') is-invalid @enderror">
+                                @error('password')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                         </div>
 
                         <div class="row form-group">
                             <div class="col-md-12">
                                 <label class="text-black" for="image">Shop Pic/Logo</label>
-                                <input type="file" id="image" name="image" class="form-control">
+                                <input type="file" id="image" name="image" class="form-control ">
                             </div>
                         </div>
 
