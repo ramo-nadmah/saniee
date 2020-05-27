@@ -493,7 +493,7 @@
             <form action="/admin/x"  method="post" class="p-5 bg-white" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-header">
-                    <h4 class="modal-title">Add </h4>
+                    <h4 class="modal-title">Add/Edit Users </h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -503,7 +503,10 @@
 
                         <div class="col-md-12">
                             <label class="text-black" for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control">
+                            <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror">
+                            @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
@@ -511,14 +514,20 @@
 
                         <div class="col-md-12">
                             <label class="text-black" for="name">Name</label>
-                            <input type="text" id="name" name="name" class="form-control">
+                            <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror">
+                            @error('name')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="row form-group">
                         <div class="col-md-12">
                             <label class="text-black" for="subject">Password</label>
-                            <input type="password" id="subject" name="password" class="form-control">
+                            <input type="password" id="subject" name="password" class="form-control @error('password') is-invalid @enderror">
+                            @error('password')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
@@ -527,7 +536,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" value="Add" class="btn btn-success py-2 px-4 text-white">
+                    <input type="submit" value="Add/Edit" class="btn btn-success py-2 px-4 text-white">
 
                 </div>
             </form>
@@ -544,7 +553,7 @@
             <form action="/admin/y"  method="post" class="p-5 bg-white" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-header">
-                    <h4 class="modal-title">Add New Category</h4>
+                    <h4 class="modal-title">Add/Edit Category</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -562,7 +571,7 @@
 
                     <div class="row form-group">
                         <div class="col-md-12">
-                            <label class="text-black" for="image">Shop Pic/Logo</label>
+                            <label class="text-black" for="image">Shop Pic/Logo          Required!</label>
                             <input type="file" id="image" name="image" class="form-control">
                         </div>
                     </div>
@@ -572,7 +581,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" value="Add" class="btn btn-success py-2 px-4 text-white">
+                    <input type="submit" value="Add/Edit" class="btn btn-success py-2 px-4 text-white">
 
                 </div>
             </form>
@@ -589,7 +598,7 @@
             <form action="/admin/z"  method="post" class="p-5 bg-white" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-header">
-                    <h4 class="modal-title">Add New Users</h4>
+                    <h4 class="modal-title">Add/Edit Shops</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -598,23 +607,32 @@
                     <div class="row form-group">
 
                         <div class="col-md-12">
-                            <label class="text-black" for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control">
+                            <label class="text-black" for="shopEmail">Email</label>
+                            <input type="email" id="shopEmail" name="shopEmail" class="form-control @error('shopEmail') is-invalid @enderror">
+                            @error('shopEmail')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="row form-group">
 
                         <div class="col-md-12">
-                            <label class="text-black" for="name">Name</label>
-                            <input type="text" id="name" name="name" class="form-control">
+                            <label class="text-black" for="shopName">Name</label>
+                            <input type="text" id="shopName" name="shopName" class="form-control @error('shopName') is-invalid @enderror">
+                            @error('shopName')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="row form-group">
                         <div class="col-md-12">
-                            <label class="text-black" for="subject">Password</label>
-                            <input type="password" id="subject" name="password" class="form-control">
+                            <label class="text-black" for="shopPassword">Password</label>
+                            <input type="password" id="shopPassword" name="shopPassword" class="form-control @error('shopPassword') is-invalid @enderror">
+                            @error('shopPassword')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
 
@@ -623,7 +641,7 @@
                 </div>
                 <div class="modal-footer">
                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" value="Add" class="btn btn-success py-2 px-4 text-white">
+                    <input type="submit" value="Add/Edit" class="btn btn-success py-2 px-4 text-white">
 
                 </div>
             </form>
@@ -644,7 +662,7 @@
         axios.get("/admin/delete?id="+id+"&flag="+flag)
             .then
             (
-                function(){
+                function(message){
 
                     if(flag =='x')
                     {
@@ -654,7 +672,7 @@
                     }
                     else  if(flag=='y')
                     {
-                       document.getElementById('tr_' + id+'y').remove();
+                            document.getElementById('tr_' + id+'y').remove();
 
                     } else  if(flag=='z')
                     {
@@ -662,6 +680,7 @@
                             document.getElementById('tr_' + id+'z').remove();
 
                     }
+
                 }
 
             );
