@@ -13,9 +13,6 @@
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
@@ -99,7 +96,7 @@ Route::get("/ads={id}",'AdsController@showShop')->name('ad.id');
 Route::get('/','IndexController@main')->name('home');
 Route::post('/addAd','AdsController@handleAddPost');
 Route::get('/about','AboutController@main');
-Route::get('/blog','BlogController@main');
+
 Route::get('/contact','ContactController@main');
 Route::Post('/contact','ContactController@store');
 
