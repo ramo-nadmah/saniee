@@ -44,12 +44,16 @@
                 <div class="card-header">
                     <h3>price :</h3>
                     <h3 id="price">  {{$post->price}} </h3>
-                    <a href="#">tell me when the price go down</a>
+
                 </div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-sm-8">
-                            <h4><a href="/shop={{$post->shop->id}}"> {{$post->shop->name}}</a></h4>
+                            @if(Auth::guard('shop')->check() && Auth::guard('shop')->user()->id == $post->shop->id)
+                                <h4><a href="/myShop={{$post->shop->id}}_0"> {{$post->shop->name}}</a></h4>
+                            @else
+                                <h4><a href="/shop={{$post->shop->id}}"> {{$post->shop->name}}</a></h4>
+                            @endif
 
                         </div>
                         <img class="col-sm-4" src="{{$post->shop->logo}}">
@@ -78,7 +82,7 @@
                                             Follow
                                          @endif
                                     @endif
-                                    @if(Auth::guard('shop')->check())
+                                    @if(Auth::guard('shop')->check() )
                                         onclick="following('2','{{Auth::guard('shop')->user()->id}}','{{$post->shop->id}}')"
 
 
