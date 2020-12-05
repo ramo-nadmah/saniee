@@ -33,7 +33,8 @@
                     @if(Auth::guard('web')->check())
                         <li class="ml-xl-3 login"><span class="border-left pl-xl-4"></span></li>
                         <li class="has-children">
-                                <a href="#">
+                            <div class="dropdown-divider"></div>
+                                <a href="/myUser={{Auth::guard('web')->user()->id}}_0">
                                      <div class="row align-items-center">
                                          <div class="col-sm-6">
                                              <h5 class="text-left">Worker({{Auth::guard('web')->user()->name}})</h5>
