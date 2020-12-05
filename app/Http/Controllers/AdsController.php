@@ -85,7 +85,7 @@ class AdsController extends Controller
             return redirect("/");
         }
         else
-            return redirect()->back()->with('error', 'Please Select Images');;
+            return redirect()->back()->with('error', 'Please Select Images');
     }
 
     public function is_followed(Request $request)
