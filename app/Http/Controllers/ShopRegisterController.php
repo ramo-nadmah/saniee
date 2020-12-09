@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Shop;
-
-
+use Illuminate\Support\Facades\Storage;
 
 
 class ShopRegisterController extends Controller
@@ -52,12 +51,21 @@ class ShopRegisterController extends Controller
         $shop->description=$request->description;
         $shop->address=$request->address;
         $shop->phone=$request->phone;
+//================================== s3 storage
+
+            $path=$request->file('image')->store('images','s3');
 
 
-        $image = $request->file('image');
-        $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images');
-        $image->move($destinationPath, $name);
+            Storage::disk('s3')->setVisibility($path,'public');
+            $name=Storage::disk('s3')->url($path);
+
+//        =================================
+
+//
+//        $image = $request->file('image');
+//        $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
+//        $destinationPath = public_path('/images');
+//        $image->move($destinationPath, $name);
         $shop->logo = $name;
 
         $shop->password = Hash::make($request->password);

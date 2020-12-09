@@ -10,6 +10,7 @@ use App\Shop;
 use Illuminate\Support\Facades\DB;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use phpDocumentor\Reflection\DocBlockFactory;
 use Illuminate\Support\Collection;
 
@@ -72,9 +73,18 @@ class AdsController extends Controller
             {
                 $pic=new Image();
 
-                $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image_arr[$i]->getClientOriginalExtension();
-                $destinationPath = public_path('/images');
-                $image_arr[$i]->move($destinationPath, $name);
+//
+                $path=$image_arr[$i]->store('images','s3');
+                Storage::disk('s3')->setVisibility($path,'public');
+                $name=Storage::disk('s3')->url($path);
+//
+
+
+//                $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image_arr[$i]->getClientOriginalExtension();
+//                $destinationPath = public_path('/images');
+//                $image_arr[$i]->move($destinationPath, $name);
+//
+
                 $pic->image = $name;
                 $pic->post_id=$post->id;
                 $pic->save();

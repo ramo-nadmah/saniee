@@ -9,6 +9,7 @@ use App\Post;
 use App\Shop;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -75,10 +76,20 @@ class ProfileController extends Controller
     public function changePP(Request $request,$id)
     {
         if($request->hasFile('image')) {
-        $image = $request->file('image');
-        $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
-        $destinationPath = public_path('/images');
-        $image->move($destinationPath, $name);
+//            ======================== Storage S3
+
+            $path=$request->file('image')->store('images','s3');
+            Storage::disk('s3')->setVisibility($path,'public');
+            $name=Storage::disk('s3')->url($path);
+
+//        =======================================
+//            $image = $request->file('image');
+//            $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
+//            $destinationPath = public_path('/images');
+//            $image->move($destinationPath, $name);
+
+
+
         Shop::where('id',$id)->update(['logo'=>$name]);
 
         return redirect()->back();
@@ -132,10 +143,21 @@ class ProfileController extends Controller
     public function changeUserPP(Request $request,$id)
     {
         if($request->hasFile('image')) {
-            $image = $request->file('image');
-            $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
-            $destinationPath = public_path('/images');
-            $image->move($destinationPath, $name);
+
+//            ====================================storage s3
+
+            $path=$request->file('image')->store('images','s3');
+            Storage::disk('s3')->setVisibility($path,'public');
+            $name=Storage::disk('s3')->url($path);
+
+//            =======================================
+
+//            $image = $request->file('image');
+//            $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
+//            $destinationPath = public_path('/images');
+//            $image->move($destinationPath, $name);
+//
+
             User::where('id',$id)->update(['logo'=>$name]);
 
             return redirect()->back();

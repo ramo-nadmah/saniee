@@ -15,6 +15,7 @@ use App\Member;
 use Illuminate\Support\Facades\Hash;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 
 class AdminController extends Controller
@@ -215,10 +216,17 @@ class AdminController extends Controller
             if($request->hasFile('image')) {
                 $category = new Category();
                 if (Category::where('name', '=', $request->name)->exists()) {
-                    $image = $request->file('image');
-                    $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
-                    $destinationPath = public_path('/images');
-                    $image->move($destinationPath, $name);
+
+//                    ------------------------------------- S3 storage
+                    $path=$request->file('image')->store('images','s3');
+                    Storage::disk('s3')->setVisibility($path,'public');
+                    $name=Storage::disk('s3')->url($path);
+
+
+
+//                    =========================== S3 Storage
+
+
 
                     Category::where('name', '=', $request->name)->update(
                         [
@@ -229,10 +237,11 @@ class AdminController extends Controller
                     );
                 } else {
                     $category->name = $request->name;
-                    $image = $request->file('image');
-                    $name = '/images/'.md5(time() . rand(0, 10000)) . '.' . $image->getClientOriginalExtension();
-                    $destinationPath = public_path('/images');
-                    $image->move($destinationPath, $name);
+//============================ S3 storage
+                    $path=$request->file('image')->store('images','s3');
+                    Storage::disk('s3')->setVisibility($path,'public');
+                    $name=Storage::disk('s3')->url($path);
+//                    =====================================================
                     $category->logo = $name;
                     $category->save();
                 }
