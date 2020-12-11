@@ -24,4 +24,27 @@
     <link href="{{ asset('css/css/all.css') }}" rel='stylesheet' type='text/css' />
 
 
+
+    {{--    @include('layouts.head')--}}
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+
+    <link rel="stylesheet" href="css/index.css">
+    <style
+    >
+        .black-text{
+            color: #202f65;
+        }
+        .card_it{
+            max-height:250px;
+            min-height: 250px;
+
+        }
+
+    </style>
+
+
 </head>
